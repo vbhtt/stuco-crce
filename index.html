@@ -22,7 +22,7 @@
 
     <style type="text/css">
 
-        .neutral{
+        .neutral {
             color: #616161;
         }
 
@@ -131,50 +131,38 @@
 
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <script src="./bower_components/semantic/dist/semantic.js"></script>
-    <!--script>
+    <script>
         $(document)
                 .ready(function () {
-
-                    // fix menu when passed
-                    $('.masthead')
-                            .visibility({
-                                once: false,
-                                onBottomPassed: function () {
-                                    $('.fixed.menu').transition('fade in');
-                                },
-                                onBottomPassedReverse: function () {
-                                    $('.fixed.menu').transition('fade out');
-                                }
-                            })
-                    ;
-
                     // create sidebar and attach to menu open
                     $('.ui.sidebar')
+                            .sidebar('setting', 'transition', 'overlay')
                             .sidebar('attach events', '.toc.item')
                     ;
 
                 })
         ;
-    </script-->
+    </script>
 </head>
 <body>
 
-<!-- Following Menu -->
-<!--div class="ui inverted top fixed hidden menu">
-    <div class="ui container">
-        <a class="active item">Home</a>
-        <a class="item">Work</a>
-        <a class="item">Company</a>
-        <a class="item">Careers</a>
-    </div>
+<div class="ui thin inverted sidebar top menu">
+    <a href="#" class="item">Events</a>
+    <a href="#" class="item">Gallery</a>
+    <a href="#" class="item">Sponsors</a>
+    <a href="#" class="item">Our Team</a>
 </div>
 
-<!-- Sidebar Menu -->
-<!--div class="ui inverted sidebar top menu">
-    <a class="active item">Home</a>
-    <a class="item">Work</a>
-    <a class="item">Company</a>
-    <a class="item">Careers</a>
+<div class="ui fixed inverted menu" id="large-nav">
+    <div class="ui container">
+        <a href="#" class="header item">
+            <img class="logo" src="images/favicon/favicon-32x32.png">
+            CRCE Students' Council</a>
+        <a href="#" class="item">Events</a>
+        <a href="#" class="item">Gallery</a>
+        <a href="#" class="item">Sponsors</a>
+        <a href="#" class="item">Our Team</a>
+    </div>
 </div>
 
 
@@ -182,20 +170,18 @@
 <div class="pusher">
     <div class="ui inverted vertical masthead center aligned segment">
 
-        <!--div class="ui container">
+        <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
-                <a class="toc item">
+                <a class="header toc item">
                     <i class="sidebar icon"></i>
+                    <img class="logo" src="images/favicon/android-chrome-192x192.png">
+                    CRCE Students' Council
                 </a>
-                <a class="active item">Home</a>
-                <a class="item">Work</a>
-                <a class="item">Company</a>
-                <a class="item">Careers</a>
             </div>
-        </div-->
+        </div>
 
         <div class="ui inverted segment">
-            <h1 class="ui inverted header"> Intra College Football</h1>
+            <h1 class="ui inverted header">Intra College Football</h1>
         </div>
 
         <div class="ui inverted horizontal divider">
@@ -461,7 +447,7 @@
                         <tr>
                             <td class="right aligned">BE Electronics</td>
                             <td class="center aligned">vs</td>
-                            <td class="left aligned">Production</td>
+                            <td class="left aligned">TE Production</td>
                         </tr>
                         </tbody>
                     </table>
