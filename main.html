@@ -21,10 +21,80 @@
 
     <link rel="stylesheet" type="text/css" href="./bower_components/semantic/dist/semantic.min.css">
 
+
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/semantic/dist/semantic.js"></script>
+
     <style type="text/css">
-        body {
-            background-color: #1B1C1D;
-            color: rgba(0, 0, 0, .87);
+        .hidden.menu {
+            display: none;
+        }
+
+        .masthead.segment {
+            min-height: 700px;
+            padding: 1em 0em;
+        }
+
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+
+        .masthead .ui.menu .ui.button {
+            margin-left: 0.5em;
+        }
+
+        .masthead h1.ui.header {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+        }
+
+        .ui.vertical.stripe {
+            padding: 8em 0em;
+        }
+
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 3em;
+        }
+
+        .ui.vertical.stripe .floated.image {
+            clear: both;
+        }
+
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+
+        .footer.segment {
+            padding: 5em 0em;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: none;
         }
 
         .ui.menu .item img.logo {
@@ -44,15 +114,83 @@
             padding: 5em 0em;
         }
 
+        #mobile-nav {
+            display: none;
+        }
+
         #main {
             padding-top: 60px;
         }
+
+        @media only screen and (max-width: 700px) {
+            #large-nav {
+                display: none;
+            }
+
+            #mobile-nav {
+                display: block;
+            }
+
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+
+            .masthead.segment {
+                min-height: 350px;
+            }
+
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+
+
+
+            #main {
+                padding-top: 0;
+            }
+        }
+
+
+        body{
+            background-color: #1B1C1D;
+            color: rgba(0, 0, 0, .87);
+        }
     </style>
+    <script>
+        $(document)
+                .ready(function () {
+                    // create sidebar and attach to menu open
+                    $('.ui.sidebar')
+                            .sidebar('setting', 'transition', 'overlay')
+                            .sidebar('attach events', '.toc.item')
+                    ;
+
+                })
+        ;
+    </script>
 
 </head>
 <body>
 
-<div class="ui fixed inverted menu">
+<div class="ui thin inverted sidebar top vertical menu">
+    <a href="#" class="item">Events</a>
+    <a href="#" class="item">Gallery</a>
+    <a href="#" class="item">Sponsors</a>
+    <a href="#" class="item">Our Team</a>
+</div>
+
+<div class="ui fixed inverted menu" id="large-nav">
     <div class="ui container">
         <a href="#" class="header item">
             <img class="logo" src="images/favicon/favicon-32x32.png">
@@ -64,18 +202,29 @@
     </div>
 </div>
 
-<div>
-    <div class="ui inverted center aligned segment" id="main">
-        <div class="ui one column stackable grid container">
-            <div class="column">
-                <a href="#" class="ui large rounded image">
-                    <img src="http://dummyimage.com/512x16:9/263238/ffffff.png&text=FootballPlaceholder">
+<div class="pusher" id="parent">
+    <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing menu">
+                <a class="header toc item">
+                    <i class="sidebar icon"></i>
+                    <img class="logo" src="images/favicon/favicon-32x32.png">
+                    CRCE Students' Council
                 </a>
             </div>
-            <div class="column">
-                <a href="#" class="ui large rounded image">
-                    <img src="http://dummyimage.com/1280x16:9/263238/ffffff.png&text=CrescendoPlaceholder">
-                </a>
+        </div>
+        <div class="ui inverted center aligned segment" id="main">
+            <div class="ui one column stackable grid container">
+                <div class="column">
+                    <a href="#" class="ui large rounded image">
+                        <img src="http://dummyimage.com/512x16:9/263238/ffffff.png&text=FootballPlaceholder">
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="#" class="ui large rounded image">
+                        <img src="http://dummyimage.com/1280x16:9/263238/ffffff.png&text=CrescendoPlaceholder">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
