@@ -164,7 +164,7 @@
 </head>
 <body>
 
-<div class="ui thin inverted sidebar top menu">
+<div class="ui inverted sidebar top menu">
     <a href="index.html" class="item">Home</a>
     <!--a href="#" class="item">Events</a>
     <a href="#" class="item">Gallery</a>
@@ -174,10 +174,10 @@
 
 <div class="ui fixed inverted menu" id="large-nav">
     <div class="ui container">
-        <a href="index.html" class="header item">
+        <a href="#" class="header item">
             <img class="logo" src="images/favicon/favicon-32x32.png">
             CRCE Students' Council</a>
-        <a href="index.html" class="item">Home</a>
+        <a href="#" class="item">Home</a>
         <!--a href="#" class="item">Events</a>
         <a href="#" class="item">Gallery</a>
         <a href="#" class="item">Sponsors</a-->
@@ -187,9 +187,8 @@
 
 
 <!-- Page Contents -->
-<div class="pusher">
+<div class="pusher" id="parent" style="background-color: #1B1C1D">
     <div class="ui inverted vertical masthead center aligned segment">
-
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
                 <a class="header toc item">
@@ -200,309 +199,312 @@
             </div>
         </div>
 
-        <div class="ui inverted segment">
-            <h1 class="ui inverted header">Intra College Football</h1>
-        </div>
+        <div class="ui inverted center aligned segment" id="main">
 
-        <div class="ui inverted horizontal divider">
-            <h3>Group Standings</h3>
-        </div>
+            <div class="ui inverted segment">
+                <h1 class="ui inverted header">Intra College Football</h1>
+            </div>
 
-        <div class="ui two column doubling stackable grid container">
-            <div class="column">
-                <div class="ui segment">
-                    <div class="ui top attached label">Group A</div>
-                    <table class="ui unstackable celled table">
-                        <thead>
-                        <tr>
-                            <th>Team</th>
-                            <th>GF</th>
-                            <th>GA</th>
-                            <th>GD</th>
-                            <th>Points</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>BE Production</td>
-                            <td>6</td>
-                            <td>0</td>
-                            <td>6</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>SE IT</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>2</td>
-                            <td>3</td>
-                        </tr>
-                        <tr class="active">
-                            <td>TE Electronics</td>
-                            <td>0</td>
-                            <td>8</td>
-                            <td>-8</td>
-                            <td>0</td>
-                        </tr>
-                        </tbody>
+            <div class="ui inverted horizontal divider">
+                <h3>Group Standings</h3>
+            </div>
 
-                    </table>
+            <div class="ui two column doubling stackable grid container">
+                <div class="column">
+                    <div class="ui segment">
+                        <div class="ui top attached label">Group A</div>
+                        <table class="ui unstackable celled table">
+                            <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>GF</th>
+                                <th>GA</th>
+                                <th>GD</th>
+                                <th>Points</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>BE Production</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>6</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>SE IT</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="active">
+                                <td>TE Electronics</td>
+                                <td>0</td>
+                                <td>8</td>
+                                <td>-8</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui segment">
+                        <div class="ui top attached label">Group B</div>
+                        <table class="ui unstackable celled table">
+                            <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>GF</th>
+                                <th>GA</th>
+                                <th>GD</th>
+                                <th>Points</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>BE IT</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>TE Computers</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>-1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="active">
+                                <td>SE Electronics</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>-3</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui segment">
+                        <div class="ui top attached label">Group C</div>
+                        <table class="ui unstackable celled table">
+                            <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>GF</th>
+                                <th>GA</th>
+                                <th>GD</th>
+                                <th>Points</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>BE Computers</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>TE IT</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="active">
+                                <td>SE Production</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui segment">
+                        <div class="ui top attached label">Group D</div>
+                        <table class="ui unstackable celled table">
+                            <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>GF</th>
+                                <th>GA</th>
+                                <th>GD</th>
+                                <th>Points</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>TE Production</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>BE Electronics</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="active">
+                                <td>SE Computers</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="ui segment">
-                    <div class="ui top attached label">Group B</div>
-                    <table class="ui unstackable celled table">
-                        <thead>
-                        <tr>
-                            <th>Team</th>
-                            <th>GF</th>
-                            <th>GA</th>
-                            <th>GD</th>
-                            <th>Points</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>BE IT</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>5</td>
-                            <td>6</td>
-                        </tr>
-                        <tr>
-                            <td>TE Computers</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>-1</td>
-                            <td>3</td>
-                        </tr>
-                        <tr class="active">
-                            <td>SE Electronics</td>
-                            <td>1</td>
-                            <td>4</td>
-                            <td>-3</td>
-                            <td>0</td>
-                        </tr>
-                        </tbody>
 
-                    </table>
+            <div class="ui inverted horizontal divider">
+                <h3>Schedule</h3>
+            </div>
+
+            <div class="ui stackable grid container">
+                <div class="centered six wide column">
+                    <div class="ui segment">
+                        <div class="ui black top attached label">Day 1: 12-7-16</div>
+                        <table class="ui unstackable single line table">
+                            <tbody>
+                            <tr>
+                                <td class="positive right aligned">BE IT</td>
+                                <td class="center aligned">4 - 1</td>
+                                <td class="negative left aligned">SE Electronics</td>
+                            </tr>
+                            <tr>
+                                <td class="neutral right aligned">TE Production</td>
+                                <td class="center aligned">0 - 0</td>
+                                <td class="neutral left aligned">SE Computers</td>
+                            </tr>
+                            <tr>
+                                <td class="neutral right aligned">BE Computers</td>
+                                <td class="center aligned">0 - 0</td>
+                                <td class="neutral left aligned">SE Production</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui segment">
+                        <div class="ui black top attached label">Day 2: 13-7-16</div>
+                        <table class="ui unstackable single line table">
+                            <tbody>
+                            <tr>
+                                <td class="negative right aligned">TE Electronics</td>
+                                <td class="center aligned">0 - 2</td>
+                                <td class="positive left aligned">SE IT</td>
+                            </tr>
+                            <tr>
+                                <td class="neutral right aligned">TE IT</td>
+                                <td class="center aligned">2 - 2</td>
+                                <td class="neutral left aligned">SE Production</td>
+                            </tr>
+                            <tr>
+                                <td class="positive right aligned">BE IT</td>
+                                <td class="center aligned">2 - 0</td>
+                                <td class="negative left aligned">TE Computers</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui segment">
+                        <div class="ui black top attached label">Day 3: 14-7-16</div>
+                        <table class="ui unstackable single line table">
+                            <tbody>
+                            <tr>
+                                <td class="neutral right aligned">BE Computers</td>
+                                <td class="center aligned">0 - 0</td>
+                                <td class="neutral left aligned">TE IT</td>
+                            </tr>
+                            <tr>
+                                <td class="neutral right aligned">BE Electronics</td>
+                                <td class="center aligned">0 - 0</td>
+                                <td class="neutral left aligned">TE Production</td>
+                            </tr>
+                            <tr>
+                                <td class="positive right aligned">BE Production</td>
+                                <td class="center aligned">6 - 0</td>
+                                <td class="negative left aligned">TE Electronics</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui segment">
+                        <div class="ui black top attached label">Day 4: 15-7-16</div>
+                        <table class="ui unstackable single line table">
+                            <tbody>
+                            <tr>
+                                <td class="positive right aligned">TE Computers</td>
+                                <td class="center aligned">1 - 0</td>
+                                <td class="negative left aligned">SE Electronics</td>
+                            </tr>
+                            <tr>
+                                <td class="neutral right aligned">BE Production</td>
+                                <td class="center aligned">0 - 0</td>
+                                <td class="neutral left aligned">SE IT</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui segment">
+                        <div class="ui black top attached label">Day 5: 18-7-16</div>
+                        <table class="ui unstackable single line table">
+                            <tbody>
+                            <tr>
+                                <td class="right aligned">BE Electronics</td>
+                                <td class="center aligned">vs</td>
+                                <td class="left aligned">SE Computers</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="ui segment">
-                    <div class="ui top attached label">Group C</div>
-                    <table class="ui unstackable celled table">
-                        <thead>
-                        <tr>
-                            <th>Team</th>
-                            <th>GF</th>
-                            <th>GA</th>
-                            <th>GD</th>
-                            <th>Points</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>BE Computers</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>TE IT</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>2</td>
-                        </tr>
-                        <tr class="active">
-                            <td>SE Production</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>2</td>
-                        </tr>
-                        </tbody>
-
-                    </table>
-                </div>
+            <div class="ui inverted horizontal divider">
+                <h3>Knockout Stages</h3>
             </div>
-            <div class="column">
-                <div class="ui segment">
-                    <div class="ui top attached label">Group D</div>
-                    <table class="ui unstackable celled table">
-                        <thead>
-                        <tr>
-                            <th>Team</th>
-                            <th>GF</th>
-                            <th>GA</th>
-                            <th>GD</th>
-                            <th>Points</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>TE Production</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>BE Electronics</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>1</td>
-                        </tr>
-                        <tr class="active">
-                            <td>SE Computers</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>1</td>
-                        </tr>
-                        </tbody>
-
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="ui inverted horizontal divider">
-            <h3>Schedule</h3>
-        </div>
-
-        <div class="ui stackable grid container">
-            <div class="centered six wide column">
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 1: 12-7-16</div>
-                    <table class="ui unstackable single line table">
-                        <tbody>
-                        <tr>
-                            <td class="positive right aligned">BE IT</td>
-                            <td class="center aligned">4 - 1</td>
-                            <td class="negative left aligned">SE Electronics</td>
-                        </tr>
-                        <tr>
-                            <td class="neutral right aligned">TE Production</td>
-                            <td class="center aligned">0 - 0</td>
-                            <td class="neutral left aligned">SE Computers</td>
-                        </tr>
-                        <tr>
-                            <td class="neutral right aligned">BE Computers</td>
-                            <td class="center aligned">0 - 0</td>
-                            <td class="neutral left aligned">SE Production</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 2: 13-7-16</div>
-                    <table class="ui unstackable single line table">
-                        <tbody>
-                        <tr>
-                            <td class="negative right aligned">TE Electronics</td>
-                            <td class="center aligned">0 - 2</td>
-                            <td class="positive left aligned">SE IT</td>
-                        </tr>
-                        <tr>
-                            <td class="neutral right aligned">TE IT</td>
-                            <td class="center aligned">2 - 2</td>
-                            <td class="neutral left aligned">SE Production</td>
-                        </tr>
-                        <tr>
-                            <td class="positive right aligned">BE IT</td>
-                            <td class="center aligned">2 - 0</td>
-                            <td class="negative left aligned">TE Computers</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 3: 14-7-16</div>
-                    <table class="ui unstackable single line table">
-                        <tbody>
-                        <tr>
-                            <td class="neutral right aligned">BE Computers</td>
-                            <td class="center aligned">0 - 0</td>
-                            <td class="neutral left aligned">TE IT</td>
-                        </tr>
-                        <tr>
-                            <td class="neutral right aligned">BE Electronics</td>
-                            <td class="center aligned">0 - 0</td>
-                            <td class="neutral left aligned">TE Production</td>
-                        </tr>
-                        <tr>
-                            <td class="positive right aligned">BE Production</td>
-                            <td class="center aligned">6 - 0</td>
-                            <td class="negative left aligned">TE Electronics</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 4: 15-7-16</div>
-                    <table class="ui unstackable single line table">
-                        <tbody>
-                        <tr>
-                            <td class="positive right aligned">TE Computers</td>
-                            <td class="center aligned">1 - 0</td>
-                            <td class="negative left aligned">SE Electronics</td>
-                        </tr>
-                        <tr>
-                            <td class="neutral right aligned">BE Production</td>
-                            <td class="center aligned">0 - 0</td>
-                            <td class="neutral left aligned">SE IT</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 5: 18-7-16</div>
-                    <table class="ui unstackable single line table">
-                        <tbody>
-                        <tr>
-                            <td class="right aligned">BE Electronics</td>
-                            <td class="center aligned">vs</td>
-                            <td class="left aligned">SE Computers</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="ui inverted horizontal divider">
-            <h3>Knockout Stages</h3>
-        </div>
-        <div class="ui stackable grid container">
-            <div class="centered six wide column">
-                <div class="ui segment">
-                    <!--div class="ui black bottom attached label">Knockout Stages</div-->
-                    <table class="ui unstackable very basic table">
-                        <tbody>
-                        <tr>
-                            <td class="right aligned">A1</td>
-                            <td class="center aligned">-</td>
-                            <td class="left aligned">D2</td>
-                            <td></td>
-                            <td class="right aligned">A2</td>
-                            <td class="center aligned">-</td>
-                            <td class="left aligned">D1</td>
-                        </tr>
-                        <tr>
-                            <td class="right aligned">B1</td>
-                            <td class="center aligned">-</td>
-                            <td class="left aligned">C2</td>
-                            <td></td>
-                            <td class="right aligned">B2</td>
-                            <td class="center aligned">-</td>
-                            <td class="left aligned">C1</td>
-                        </tr>
-                        </tbody>
-                    </table>
+            <div class="ui stackable grid container">
+                <div class="centered six wide column">
+                    <div class="ui segment">
+                        <!--div class="ui black bottom attached label">Knockout Stages</div-->
+                        <table class="ui unstackable very basic table">
+                            <tbody>
+                            <tr>
+                                <td class="right aligned">A1</td>
+                                <td class="center aligned">-</td>
+                                <td class="left aligned">D2</td>
+                                <td></td>
+                                <td class="right aligned">A2</td>
+                                <td class="center aligned">-</td>
+                                <td class="left aligned">D1</td>
+                            </tr>
+                            <tr>
+                                <td class="right aligned">B1</td>
+                                <td class="center aligned">-</td>
+                                <td class="left aligned">C2</td>
+                                <td></td>
+                                <td class="right aligned">B2</td>
+                                <td class="center aligned">-</td>
+                                <td class="left aligned">C1</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
