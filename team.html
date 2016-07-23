@@ -20,11 +20,14 @@
     <title>CRCE Students' Council</title>
 
     <link rel="stylesheet" type="text/css" href="./bower_components/semantic/dist/semantic.min.css">
-
+    <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/components/visibility.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/components/transition.min.css">
 
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <!--<script src="./bower_components/semantic/dist/semantic.min.js"></script>-->
     <script src="bower_components/semantic/dist/components/sidebar.min.js"></script>
+    <script src="bower_components/semantic/dist/components/visibility.min.js"></script>
+    <script src="bower_components/semantic/dist/components/transition.min.js"></script>
 
     <style type="text/css">
         .hidden.menu {
@@ -497,6 +500,17 @@
                     </div>
                 </div>
             </div>
+
+            <script>
+                $('.ui.centered.card .image img')
+                    .visibility({
+                        type         :   'image',
+                        transition   :   'fade in',
+                        duration     :   1000
+                    })
+                ;
+
+            </script>
 
         </div>
     </div>
