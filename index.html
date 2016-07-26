@@ -157,6 +157,10 @@
                 font-size: 1.5em;
             }
 
+            .ui.sidebar {
+                overflow: visible !important;
+            }
+
             #main {
                 padding-top: 0;
             }
@@ -203,8 +207,20 @@
 </head>
 <body>
 
-<div class="ui thin inverted sidebar top menu">
+<div class="ui inverted sidebar top menu">
     <a href="#" class="active item">Home</a>
+    <div class="ui simple dropdown item">
+        Events
+        <i class="dropdown icon"></i>
+        <div class=" menu">
+            <a class="item" href="http://crescendo.fragnel.edu.in">Crescendo</a>
+            <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate">Fr. Conceicao Rodrigues Memorial Debate</a>
+            <a class="item" href="http://euphoria.gq">Euphoria</a>
+            <!--Sports also should have a page-->
+            <!--Fragmag is not an event, but needs to be put somewhere-->
+            <a class="item" href="http://fragmag.gq">Fragmag</a>
+        </div>
+    </div>
     <!--a href="#" class="item">Events</a>
     <a href="#" class="item">Gallery</a>
     <a href="#" class="item">Sponsors</a-->
@@ -222,6 +238,7 @@
             <i class="dropdown icon"></i>
             <div class=" menu">
                 <a class="item" href="http://crescendo.fragnel.edu.in">Crescendo</a>
+                <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate">Fr. Conceicao Rodrigues Memorial Debate</a>
                 <a class="item" href="http://euphoria.gq">Euphoria</a>
                 <!--Fragmag is not an event, but needs to be put somewhere-->
                 <a class="item" href="http://fragmag.gq">Fragmag</a>
