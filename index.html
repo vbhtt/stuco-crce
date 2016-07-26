@@ -25,6 +25,8 @@
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <!--<script src="./bower_components/semantic/dist/semantic.min.js"></script>-->
     <script src="bower_components/semantic/dist/components/sidebar.min.js"></script>
+    <script src="bower_components/semantic/dist/components/dropdown.min.js"></script>
+    <script src="bower_components/semantic/dist/components/transition.min.js"></script>
 
     <style type="text/css">
         .hidden.menu {
@@ -173,6 +175,9 @@
                             .sidebar('setting', 'transition', 'overlay')
                             .sidebar('attach events', '.toc.item')
                     ;
+                    $('.ui.dropdown')
+                            .dropdown()
+                    ;
 
                 })
         ;
@@ -212,11 +217,20 @@
             <img class="logo" src="images/favicon/favicon-32x32.png">
             CRCE Students' Council</a>
         <a href="#" class="active item">Home</a>
-        <!--a href="#" class="item">Events</a>
-        <a href="#" class="item">Gallery</a>
-        <a href="#" class="item">Sponsors</a-->
+        <div class="ui dropdown item">
+            Events
+            <i class="dropdown icon"></i>
+            <div class=" menu">
+                <a class="item" href="http://crescendo.fragnel.edu.in">Crescendo</a>
+                <a class="item" href="http://euphoria.gq">Euphoria</a>
+                <!--Fragmag is not an event, but needs to be put somewhere-->
+                <a class="item" href="http://fragmag.gq">Fragmag</a>
+            </div>
+        </div>
         <a href="team.html" class="item">Our Team</a>
     </div>
+    <!--<a href="#" class="item">Gallery</a>-->
+    <!--<a href="#" class="item">Sponsors</a>-->
 </div>
 
 <div class="pusher" id="parent" style="background-color: #1B1C1D">
