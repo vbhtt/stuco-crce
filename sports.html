@@ -27,18 +27,20 @@
     <script src="bower_components/semantic/dist/components/sidebar.min.js"></script>
     <script src="bower_components/semantic/dist/components/dropdown.min.js"></script>
     <script src="bower_components/semantic/dist/components/transition.min.js"></script>
+    <script src="bower_components/semantic/dist/components/dimmer.min.js"></script>
+    <script src="bower_components/semantic/dist/components/modal.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-bracket/dist/jquery.bracket.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/jquery-bracket/dist/jquery.bracket.min.css">
 
     <style type="text/css">
         .hidden.menu {
             display: none;
         }
 
-
-
-        .caption{
+        .caption {
             font-size: large;
             color: black;
-            padding:16px;
+            padding: 16px;
             display: block;
         }
 
@@ -179,6 +181,115 @@
             background-color: #1B1C1D;
             color: rgba(0, 0, 0, .87);
         }
+
+        #minimal {
+            animation: none;
+            animation-delay: 0;
+            animation-direction: normal;
+            animation-duration: 0;
+            animation-fill-mode: none;
+            animation-iteration-count: 1;
+            animation-name: none;
+            animation-play-state: running;
+            animation-timing-function: ease;
+            backface-visibility: visible;
+            background-clip: border-box;
+            background-origin: padding-box;
+            background-position-x: 0;
+            background-position-y: 0;
+            background: transparent none repeat scroll 0 0;
+            background-size: auto auto;
+            border-collapse: separate;
+            border-image: none;
+            border-spacing: 0;
+            border-radius: 0;
+            border: medium none inherit;
+            bottom: auto;
+            box-shadow: none;
+            box-sizing: content-box;
+            caption-side: top;
+            clear: none;
+            clip: auto;
+            color: inherit;
+            columns: auto;
+            column-count: auto;
+            column-fill: balance;
+            column-gap: normal;
+            column-rule: medium none currentColor;
+            column-rule-color: currentColor;
+            column-rule-style: none;
+            column-rule-width: none;
+            column-span: 1;
+            column-width: auto;
+            content: normal;
+            counter-increment: none;
+            counter-reset: none;
+            cursor: auto;
+            direction: ltr;
+            display: inline;
+            empty-cells: show;
+            float: none;
+            font: normal;
+            font-family: inherit;
+            font-size: medium;
+            height: auto;
+            hyphens: none;
+            left: auto;
+            letter-spacing: normal;
+            line-height: normal;
+            list-style: disc outside none;
+            margin: 0;
+            max-height: none;
+            max-width: none;
+            min-height: 0;
+            min-width: 0;
+            opacity: 1;
+            orphans: 0;
+            outline: invert none medium;
+            overflow: visible;
+            padding: 0;
+            page-break-after: auto;
+            page-break-before: auto;
+            page-break-inside: auto;
+            perspective: none;
+            perspective-origin: 50% 50%;
+            position: static;
+            /* May need to alter quotes for different locales (e.g fr) */
+            quotes: '\201C' '\201D' '\2018' '\2019';
+            right: auto;
+            tab-size: 8;
+            table-layout: auto;
+            text-align: inherit;
+            text-align-last: auto;
+            text-decoration: none;
+            text-decoration-color: inherit;
+            text-decoration-style: solid;
+            text-indent: 0;
+            text-shadow: none;
+            text-transform: none;
+            top: auto;
+            transform: none;
+            transform-style: flat;
+            transition: none;
+            transition-delay: 0s;
+            transition-duration: 0s;
+            transition-property: none;
+            transition-timing-function: ease;
+            unicode-bidi: normal;
+            vertical-align: baseline;
+            visibility: visible;
+            white-space: normal;
+            widows: 0;
+            width: auto;
+            word-spacing: normal;
+            z-index: auto;
+        }
+        /*.match {*/
+            /*position: absolute*/
+        /*}*/
+        .teamContainer {
+            transform: translate(0,-50%)
+        }
     </style>
     <script>
         $(document)
@@ -193,17 +304,27 @@
                     ;
 
                     $('#girls').hide();
-                    $('#boy-button').click(function(){
+                    $('#boy-button').click(function () {
                         $("#boy-button").addClass("active");
                         $("#girl-button").removeClass("active");
                         $("#girls").hide();
                         $("#boys").show();
                     });
-                    $('#girl-button').click(function(){
+                    $('#girl-button').click(function () {
                         $("#girl-button").addClass("active");
                         $("#boy-button").removeClass("active");
                         $("#boys").hide();
                         $("#girls").show();
+                    });
+
+                    $('.ui.modal')
+                            .modal()
+                    ;
+
+                    $('#grink').click(function () {
+                        $('.grink-football.modal')
+                                .modal('show')
+                        ;
                     });
                 })
         ;
@@ -230,25 +351,17 @@
 <body>
 
 <div class="ui inverted sidebar top menu">
-    <a href="#" class="active item">Home</a>
-
+    <a href="#" class="item">Home</a>
     <div class="ui simple dropdown item">
-        Events
+        Activities
         <i class="dropdown icon"></i>
-
         <div class=" menu">
-            <a class="item" href="http://crescendo.fragnel.edu.in">Crescendo</a>
-            <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate">Fr. Conceicao
-                Rodrigues Memorial Debate</a>
-            <a class="item" href="http://euphoria.gq">Euphoria</a>
-            <!--Sports also should have a page-->
-            <!--Fragmag is not an event, but needs to be put somewhere-->
-            <a class="item" href="http://fragmag.gq">Fragmag</a>
+            <a class="item" href="http://crescendo.fragnel.edu.in" target="_blank">Crescendo</a>
+            <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate" target="_blank">Fr. Conceicao Rodrigues Memorial Debate</a>
+            <a class="item" href="http://euphoria.gq" target="_blank">Euphoria</a>
+            <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
         </div>
     </div>
-    <!--a href="#" class="item">Events</a>
-    <a href="#" class="item">Gallery</a>
-    <a href="#" class="item">Sponsors</a-->
     <a href="team.html" class="item">Our Team</a>
 </div>
 
@@ -258,27 +371,49 @@
             <img class="logo" src="images/favicon/favicon-32x32.png">
             CRCE Students' Council</a>
         <a href="#" class="item">Home</a>
-
         <div class="ui dropdown item">
-            Events
+            Activities
             <i class="dropdown icon"></i>
-
             <div class=" menu">
                 <a class="item" href="http://crescendo.fragnel.edu.in">Crescendo</a>
-                <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate">Fr.
-                    Conceicao Rodrigues Memorial Debate</a>
+                <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate">Fr. Conceicao Rodrigues Memorial Debate</a>
                 <a class="item" href="http://euphoria.gq">Euphoria</a>
-                <!--Fragmag is not an event, but needs to be put somewhere-->
                 <a class="item" href="http://fragmag.gq">Fragmag</a>
             </div>
         </div>
         <a href="team.html" class="item">Our Team</a>
     </div>
-    <!--<a href="#" class="item">Gallery</a>-->
-    <!--<a href="#" class="item">Sponsors</a>-->
 </div>
 
 <div class="pusher" id="parent" style="background-color: #1B1C1D">
+    <div class="ui grink-football modal">
+        <div class="segment">
+            <div id="minimal">
+                <div class="demo"></div>
+                <script type="text/javascript">
+                    var minimalData = {
+                        teams: [
+                            ["TE IT", "SE Electronics"],
+                            ["BE Production", "-"],
+                            ["TE Computers", "SE Production"],
+                            ["BE IT", "-"],
+                            ["TE Production", "SE Computers"],
+                            ["BE Electronics", "-"],
+                            ["TE Electronics", "SE IT"],
+                            ["BE Computers", "-"]
+                        ],
+                        results: []
+                    };
+
+                    $(function () {
+                        $('#minimal').find('.demo').bracket({
+                            init: minimalData /* data to initialize the bracket with */
+                        })
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
     <div class="ui vertical masthead center aligned segment">
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
@@ -321,12 +456,13 @@
         </div>
         <div class="ui four column center aligned stackable grid container" id="girls">
             <div class="column">
-                <a href="football.html" class="ui compact segment" style="padding: 0">
+                <a class="ui compact segment" style="padding: 0" id="grink">
                     <div class="ui rounded image">
                         <img src="gallery/football/winners.jpg"/>
                     </div>
                     <span class="caption">Rink Football</span>
                 </a>
+
             </div>
             <div class="column">
                 <a href="football.html" class="ui compact segment" style="padding: 0">
