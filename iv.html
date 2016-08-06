@@ -27,6 +27,7 @@
     <script src="bower_components/semantic/dist/components/sidebar.min.js"></script>
     <script src="bower_components/semantic/dist/components/dropdown.min.js"></script>
     <script src="bower_components/semantic/dist/components/transition.min.js"></script>
+    <script src="bower_components/semantic/dist/components/visibility.min.js"></script>
 
     <style type="text/css">
         .hidden.menu {
@@ -185,6 +186,30 @@
 
                     $('.ui.rating')
                       .rating('disable')
+                    ;
+
+                    $('.column .segment')
+                        .visibility({
+                            onTopVisible: function(){
+                                $(this).transition({
+                                    animation: 'fade right in',
+                                    duration: 2000
+                                })
+                                ;
+                            }
+                        })
+                    ;
+
+                    $('.ui.cards .card')
+                        .visibility({
+                            onTopVisible: function(){
+                                $(this).transition({
+                                    animation: 'fade up in',
+                                    duration: 2000,
+                                })
+                                ;
+                            }
+                        })
                     ;
 
                 })
@@ -467,6 +492,8 @@
 
             </div>
         </div>
+
+        <br><br>
 
         <div class="ui horizontal divider">
             <h1 class="ui inverted header">Hotels</h1>
