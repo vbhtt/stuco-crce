@@ -47,7 +47,7 @@
         }
 
         .masthead h1.ui.header {
-            margin-top: 3em;
+            margin-top: 2em;
             margin-bottom: 0em;
             font-size: 4em;
             font-weight: normal;
@@ -148,8 +148,8 @@
             }
 
             .masthead h1.ui.header {
-                font-size: 2em;
-                margin-top: 1.5em;
+                font-size: 3em;
+                margin-top: 2em;
             }
 
             .masthead h2 {
@@ -171,6 +171,16 @@
             color: rgba(0, 0, 0, .87);
         }
 
+        .ui.icon.button {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+        }
+
+        .ui.circular.segment {
+            width:  150px;
+            height: 150px;
+            padding: 20px;
+        }
 
     </style>
     <script>
@@ -255,17 +265,32 @@
                 </a>
             </div>
         </div>
+
         <div class="ui inverted segment">
+
+            <div class="ui two column centered grid">
+                <div class="column">
+                    <div class="ui inverted segment">
+                            <img src="images/logos/crce.png" class="ui small centered image">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui inverted segment">
+                        <img src="images/logos/stuco.png" class="ui small centered image">
+                    </div>
+                </div>
+            </div>
+
             <h1 class="ui inverted header">Students' Council</h1>
-            <h2>Fr. CRCE</h2>
+            <h2>Fr. Conceicao Rodrigues College of Engineering</h2>
             <div class="ui inverted segment">
-                <button class="ui circular facebook icon button" onclick="parent.open('https://www.facebook.com/frcrce.studentscouncil')">
+                <button class="ui circular facebook huge icon button" onclick="parent.open('https://www.facebook.com/frcrce.studentscouncil')">
                     <i class="facebook f icon"></i>
                 </button>
-                <button class="ui circular instagram icon button" onclick="parent.open('https://www.instagram.com/frcrce_bandra/')">
+                <button class="ui circular instagram huge icon button" onclick="parent.open('https://www.instagram.com/frcrce_bandra/')">
                     <i class="instagram icon"></i>
                 </button>
-                <button class="ui circular youtube icon button" onclick="parent.open('https://www.youtube.com/channel/UCYDYa6njIVhimmdVe_UewhQ')">
+                <button class="ui circular youtube huge icon button" onclick="parent.open('https://www.youtube.com/channel/UCYDYa6njIVhimmdVe_UewhQ')">
                     <i class="youtube play icon"></i>
                 </button>
             </div>
