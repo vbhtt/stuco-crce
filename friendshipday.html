@@ -130,6 +130,10 @@
                 margin-top: 0.5em;
                 font-size: 1.5em;
             }
+
+            .ui.sidebar {
+                overflow: visible !important;
+            }
         }
 
 
@@ -147,6 +151,10 @@
                             .sidebar('attach events', '.toc.item')
                     ;
                     $('.card .image').dimmer({on: 'hover'});
+
+                    $('.ui.dropdown')
+                            .dropdown()
+                    ;
 
                 })
         ;
@@ -186,7 +194,7 @@
             <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
         </div>
     </div>
-    <a href="team.html" class="item">Our Team</a>
+    <a href="about.html" class="item">About Us</a>
 </div>
 
 <div class="ui fixed inverted menu" id="large-nav">
@@ -208,7 +216,7 @@
                 <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
             </div>
         </div>
-        <a href="team.html" class="item">Our Team</a>
+        <a href="about.html" class="item">About Us</a>
     </div>
 </div>
 
@@ -444,6 +452,22 @@
                     </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+    <div class="ui inverted vertical footer segment">
+        <div class="ui inverted section divider"></div>
+        <div class="ui center aligned container">
+            <img src="images/favicon/favicon-32x32.png" class="ui centered mini image">
+            <div class="ui horizontal inverted small divided link list">
+                <a class="item" href="index.html">Home</a>
+                <a class="item" href="#">Site Map</a>
+                <a class="item" href="about.html">Contact Us</a>
+                <a class="item" href="#">Terms and Conditions</a>
+            </div>
+            <div class="ui container">
+                <p>Copyright © 2016 Students' Council</p>
+                <p>Site design by Varun Bhatt & Flavion D'sa</p>
             </div>
         </div>
     </div>
