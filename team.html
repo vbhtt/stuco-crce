@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/components/transition.min.css">
 
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <!--<script src="./bower_components/semantic/dist/semantic.min.js"></script>-->
+    <script src="./bower_components/semantic/dist/semantic.min.js"></script>
     <script src="bower_components/semantic/dist/components/sidebar.min.js"></script>
     <script src="bower_components/semantic/dist/components/transition.min.js"></script>
 
@@ -166,8 +166,9 @@
             color: rgba(0, 0, 0, .87);
         }
 
-        .image {
-            display: none;
+        .ui.icon.button {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
         }
 
     </style>
@@ -178,6 +179,10 @@
                     $('.ui.sidebar')
                             .sidebar('setting', 'transition', 'overlay')
                             .sidebar('attach events', '.toc.item')
+                    ;
+
+                    $('.ui.dropdown')
+                            .dropdown()
                     ;
 
                 })
@@ -256,6 +261,7 @@
             <div class="ui inverted horizontal divider">
                 <h2>Senior Council</h2>
             </div>
+            <br>
 
             <div class="ui five stackable centered cards">
                 <div class="card">
@@ -264,24 +270,44 @@
                     </div>
                     <div class="content">
                         <a><h3>Shantanu Sabadra</h3></a>
-
                         <div class="description">President</div>
-
+                        <div class="meta">B.E. Info Tech</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/shanty2509/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="ui five doubling centered cards">
+            <div class="ui five stackable centered cards">
 
                 <div class="card">
                     <div>
                         <img class="ui medium centered circular image" src="images/profile-pics/Jerry.png">
                     </div>
                     <div class="content">
-                        <a><h3>Jeremiah D'Souza</h3></a>
-
+                        <a><h3>Jeremiah D'souza</h3></a>
                         <div class="description">General Secretary</div>
-
+                        <div class="meta">T.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon disabled button">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -291,9 +317,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Kimberley Pais</h3></a>
-
                         <div class="description">Cultural Secretary</div>
-
+                        <div class="meta">T.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/kim_pais/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -303,9 +339,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Pratikraj Salian</h3></a>
-
                         <div class="description">Sports Secretary</div>
-
+                        <div class="meta">T.E. Production</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/pratikraj_thelensman/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -315,9 +361,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Jeffi Edelbert</h3></a>
-
                         <div class="description">Sports Secretary</div>
-
+                        <div class="meta">T.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/jeffi_edelbert/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -327,9 +383,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Dhruva Gaidhani</h3></a>
-
                         <div class="description">Editorial Secretary</div>
-
+                        <div class="meta">T.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon disabled button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/dhruva_gaidhani/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -339,9 +405,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Elroy Rodrigues</h3></a>
-
                         <div class="description">Technical &amp; IV Head</div>
-
+                        <div class="meta">T.E. Production</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/rodriguez_el_4/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -351,9 +427,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Janice Abraham</h3></a>
-
                         <div class="description">Public Relations Head</div>
-
+                        <div class="meta">T.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/janicejabraham/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -363,9 +449,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Shubham Shete</h3></a>
-
                         <div class="description">Marketing Head</div>
-
+                        <div class="meta">T.E. Info Tech</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/c.a.e.s.a.r_c.r.e.e.d/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -375,9 +471,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Flavion D'sa</h3></a>
-
                         <div class="description">Design Head</div>
-
+                        <div class="meta">T.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/flavion.dsa/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -387,29 +493,52 @@
                     </div>
                     <div class="content">
                         <a><h3>Gail Renee Pinto</h3></a>
-
                         <div class="description">Alumni Head</div>
-
+                        <div class="meta">T.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button" onclick="parent.open('https://instagram.com/_u/reneegailp/')">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
             </div>
 
+            <br><br>
+
             <div class="ui inverted horizontal divider">
                 <h2>Junior Council</h2>
             </div>
 
-            <div class="ui five doubling centered cards">
+            <br>
 
+            <div class="ui five stackable centered cards">
                 <div class="card">
                     <div>
                         <img class="ui medium centered circular image" src="images/profile-pics/Vishwesh.png">
                     </div>
                     <div class="content">
                         <a><h3>Vishwesh Hande</h3></a>
-
                         <div class="description">SE Representative</div>
-
+                        <div class="meta">S.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -419,9 +548,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Sonu Yadav</h3></a>
-
                         <div class="description">SE Representative</div>
-
+                        <div class="meta">S.E. Info Tech</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -431,9 +570,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Gopesh Rajderkar</h3></a>
-
                         <div class="description">SE Representative</div>
-
+                        <div class="meta">S.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -443,15 +592,25 @@
                     </div>
                     <div class="content">
                         <a><h3>Joshua Noronha</h3></a>
-
                         <div class="description">SE Representative</div>
-
+                        <div class="meta">S.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
             </div>
 
-            <div class="ui five doubling centered cards">
+            <div class="ui five stackable centered cards">
 
                 <div class="card">
                     <div>
@@ -459,9 +618,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Joann Tharian</h3></a>
-
                         <div class="description">Ladies Representative</div>
-
+                        <div class="meta">S.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -471,9 +640,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Shreya Wazir</h3></a>
-
                         <div class="description">Ladies Representative</div>
-
+                        <div class="meta">S.E. Electronics</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -483,9 +662,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Rucha Patil</h3></a>
-
                         <div class="description">Assistant Design Head</div>
-
+                        <div class="meta">S.E. Info Tech</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -495,9 +684,19 @@
                     </div>
                     <div class="content">
                         <a><h3>Fascel Fernandes</h3></a>
-
                         <div class="description">Documentation In-charge</div>
-
+                        <div class="meta">S.E. Computers</div>
+                    </div>
+                    <div class="extra content">
+                        <button class="ui large circular facebook icon button">
+                            <i class="ui facebook f icon"></i>
+                        </button>
+                        <button class="ui large circular instagram icon button">
+                            <i class="ui instagram icon"></i>
+                        </button>
+                        <button class="ui large circular google plus icon button">
+                            <i class="ui google plus icon"></i>
+                        </button>
                     </div>
                 </div>
 
