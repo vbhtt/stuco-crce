@@ -1,0 +1,1569 @@
+/*
+  ===================================================
+  Fonts
+  ===================================================
+*/
+
+@font-face {
+font-family: ProximaNovaEB;
+src: url("../fonts/ProximaNova-Extrabold.otf") format("opentype");
+}
+
+@font-face {
+font-family: ProximaNovaSB;
+src: url("../fonts/ProximaNova-Semibold.otf") format("opentype");
+}
+
+@font-face {
+font-family: ProximaNovaLI;
+src: url("../fonts/ProximaNova-Light.otf") format("opentype");
+}
+
+@font-face {
+font-family: ProximaNovaBO;
+src: url("../fonts/ProximaNova-Bold.otf") format("opentype");
+}
+
+@font-face {
+font-family: Nickainley;
+src: url("../fonts/Nickainley.otf") format("opentype");
+}
+
+@font-face {
+font-family: ProximaNovaBI;
+src: url("../fonts/ProximaNova-BoldIt.otf") format("opentype");
+}
+@font-face {
+font-family: ProximaNovaR;
+src: url("../fonts/ProximaNova-Regular.otf") format("opentype");
+}
+/*
+  ===================================================
+  MI
+  ===================================================
+*/
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+}
+
+.Title {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  color: #fff;
+  text-align: center;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+  ===================================================
+  Elements
+  ===================================================
+*/
+
+#MI {
+  font-family: ProximaNovaEB;
+  font-size: 500%;
+  margin: 3.5% 0 0 0;
+}
+
+#year {
+  height: 7%;
+  font-size: 150%;
+  font-family: Nickainley;
+}
+
+#insti {
+  font-family: ProximaNovaLI;
+  font-size: 150%;
+  margin: 0;
+  height: 5%;
+}
+#MI {
+  -webkit-animation-name: fade-in; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 5s; /* Chrome, Safari, Opera */
+  animation-name: fade-in;
+  animation-duration: 5s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fade-in {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+/* Standard syntax */
+@keyframes fade-in {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+#insti {
+  -webkit-animation-name: fadeInDown; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 5s; /* Chrome, Safari, Opera */
+  animation-name: fadeInDown;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+#year {
+  -webkit-animation-name: fadeInUp; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 5s; /* Chrome, Safari, Opera */
+  animation-name: fadeInUp;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*
+  ===================================================
+  Arrow
+  ===================================================
+*/
+
+#dir {
+  position: absolute;
+  top: 85%;
+  right: 0;
+  bottom: 0;
+
+  left: 48%;
+
+
+}
+
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -5;
+}
+
+/*
+  ===================================================
+  Arrow
+  ===================================================
+*/
+
+#main, #main2 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+}
+
+#main2:before {      /* create a full-height inline block pseudo-element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; /* vertical alignment of the inline element */
+    height: 100%;
+}
+
+.viewcontainer{
+  width: 80%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+}
+
+/*
+  ===================================================
+  Nav bar
+  ===================================================
+*/
+@media(max-width: 800px){
+  .share-buttons{
+    background-color: #111;
+    width:13em;
+    height:100%;
+    display:block;
+    position:fixed;
+    left:-13em;
+    top:0px;
+    transition:left 0.3s linear;
+    margin:0;
+    border:0;
+    border-radius:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+    z-index: 5; 
+  }
+
+  .visible{
+    left:0px;
+    transition:left 0.3s linear;
+  }
+
+  #nav_bg{
+    display:inline-block;
+    vertical-align: middle;
+    width:1.8em;
+    height:1.8em;
+    margin:0;
+    position: fixed;
+    top:0;
+    left:0;
+    padding:12px 0 0 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    z-index: 6;
+
+  }
+ #nav_bg #nav_bar{
+    display:inline-block;
+    vertical-align: middle;
+    height:2em;
+    cursor:pointer;
+    margin:0;
+    
+  }
+  #nav_bg #nav_bar span{
+    height:2px;
+    background:#ddf0f9;
+    margin:5px;
+    display:block;
+    width:1em;
+    
+  }
+  #nav_bar span:nth-child(2){
+    width:1em;
+  }
+
+  #nav_bar span:nth-child(3){
+    width:1em;
+  }
+  .share-buttons{
+    padding-top: 3em;
+  }
+  .share-button{
+    margin-bottom: 0.6em;
+  }
+  .share-button-secondary-content a{
+    font-family: ProximaNovaBO;
+    font-style: bold;
+    font-size: 1.25em;
+    display: block;
+    height: 30px;
+    text-align: left;
+    padding-left: 24px;
+    padding-right: 18px;
+    line-height: 30px;
+    letter-spacing: .13em;
+  }
+  .share-button-secondary:hover{
+    background-color: #555;
+  }
+  /*.opacity{
+    background:rgba(0,0,0,0.7);
+
+  }*/
+
+
+}
+@media (min-width: 800px){
+  .share-buttons {
+    z-index: 2;
+    margin-left: 4%;
+    width: 16%;
+    height: 30%;
+    top: 50%;
+    float: left;
+    padding-top: 15%;
+  }
+  .share-buttons .share-button {
+    float: left;
+    margin-top: 12.5%;
+  }
+  .share-buttons .share-button:first-child {
+    margin-top: 0;
+  }
+  .share-buttons .share-button:after {
+    clear: both;
+    display: table;
+  }
+
+  .share-button {
+    display: block;
+    position: relative;
+    height: 12%;
+
+  }
+  .share-button:hover {
+    cursor: pointer;
+  }
+  .share-button:hover .share-button-primary {
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+  .share-button:hover .share-button-secondary-content {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  .share-button-primary {
+    position: absolute;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 13px;
+    left: 0;
+    top: 50%;
+    margin-top: -11px;
+  }
+
+  .share-button-secondary {
+    overflow: hidden;
+    margin-left: 15px;
+    height: 30px;
+    width: 200px;
+  }
+
+  .share-button-secondary-content {
+    font-family: ProximaNovaBO;
+    font-style: bold;
+    font-size: 1.25em;
+    display: block;
+    height: 30px;
+    text-align: left;
+    padding-left: 24px;
+    padding-right: 18px;
+    line-height: 30px;
+    letter-spacing: .13em;
+   
+    border-radius: 0 25px 25px 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    -webkit-transition: -webkit-transform 350ms ease;
+    transition: -webkit-transform 350ms ease;
+    transition: transform 350ms ease;
+    transition: transform 350ms ease, -webkit-transform 350ms ease;
+  }
+
+  #b1 .share-button-primary{
+    background-color: #9ccee6;
+  }
+  #b2 .share-button-primary{
+    background-color: #86c0db;;
+  }
+  #b3 .share-button-primary{
+    background-color: #70b0cf;;
+  }
+  #b4 .share-button-primary{
+    background-color: #47aac5;;
+  }
+  #b5 .share-button-primary{
+    background-color: #319cb9;;
+  }
+  #b6 .share-button-primary{
+    background-color: #208dab;;
+  }
+
+  a:link, a:hover, a:active, a:visited{
+    text-decoration: none;
+  }
+}
+/*
+  ===================================================
+  Section1 - Center
+  ===================================================
+*/
+
+.title, 
+.social-media {
+  display: inline-block;
+  vertical-align: top;
+}
+.title {
+  position: relative;
+  left: 15%;
+  text-align: right;
+  width: 65%;
+  height: 30%;
+  padding-top: 2%;
+}
+.title h1, h4 {
+  color: #ddf0f9;
+}
+
+.title h4 {
+  font-family: ProximaNovaBI;
+  letter-spacing: 0.15em;
+  font-size: 155%;
+  line-height: 1%;
+}
+.title h1 {
+  font-family: ProximaNovaEB;
+  letter-spacing: 0.10em;
+  font-size: 450%;
+  line-height: 21%;
+}
+
+#lookback {
+  padding: 0;
+}
+
+#content {
+  width: 60%;
+  height:;
+  vertical-align: bottom;
+  position: relative;
+  top: 70%;
+  left: 5%;
+  margin-right: 0%;
+  padding-top: 7%;
+}
+
+/*
+  ===================================================
+  Section2 - Right
+  ===================================================
+*/
+.social-media {
+  position: absolute;
+  right: 3%;
+  margin-top: 15%;
+  margin-right: 3%;
+  text-align: right;
+  width: 3%;
+
+}
+#nav_bar_soc_med{
+  display: none;
+  position: absolute;
+  top: 75%;
+  letter-spacing: 12px;
+  text-align: center;
+
+  left: 14px;
+}
+#nav_bar_soc_med img{
+  width:15%;
+}
+.social-media #fb, #twitter, #insta, #yt {
+  display: block;
+   margin-top: 30px;
+  -moz-transition:-moz-transform 0.1s ease-in; 
+  -webkit-transition:-webkit-transform 0.1s ease-in; 
+  -o-transition:-o-transform 0.1s ease-in;
+}
+
+.social-media img:hover{
+  -moz-transform:scale(1.1); 
+  -webkit-transform:scale(1.1);
+  -o-transform:scale(1.1);
+}
+
+/*
+  ===================================================
+  AboutUs
+  ===================================================
+*/
+
+#counters {
+  width: 20%;
+  height: 100%;
+  margin-right: 0;
+  text-align: right;
+  position: absolute;
+  right: 2%;
+}
+
+.count {
+  font-family: ProximaNovaBO;
+  color: #ddf0f9;
+  font-size: 300%;
+}
+.type {
+  font-family: ProximaNovaLI;
+  color: #208dab;
+  font-size: 85%;
+
+  margin: 0 0 10% 0;
+}
+
+#events {
+  position: relative;
+
+  top: 62%;
+
+}
+
+/*
+  ===================================================
+  Timeline
+  ===================================================
+*/
+
+#timeline {
+  width: 60%;
+  height: 100%;
+  vertical-align: top;
+  color: #ddf0f9;
+  position: absolute;
+  top: 100%;
+  right: 20%;
+}
+#timeline1{
+  display: none;
+}
+
+#num1, #num2, #num3, #num4, #num5, #num6 {
+  
+  
+  letter-spacing: 0.18em;
+
+
+  font-size: 100%;
+
+  font-family: ProximaNovaSB;
+  line-height: 100%;
+
+}
+#cd-timeline{
+  top:5%;
+  left: 8.5%;
+  height: 83%;
+  position: absolute;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height:100%;
+  width: 0px;
+  border-right:dashed 3px #d7e4ed;
+}
+
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+.cd-timeline-block {
+  position: relative;
+  
+}
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.cd-timeline-content {
+  position: relative;
+
+}
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid white;
+}
+
+.cd-timeline-block:nth-child(odd) .cd-timeline-content::before{
+  top: 2px;
+}
+  .cd-timeline-content {
+    margin-left: 0;
+    width: 45%;
+  }
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: white;
+  }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+  }
+  .cd-timeline-block:nth-child(odd) .cd-timeline-content::before {
+    border-color: transparent;
+    border-right-color: white;
+  }
+  .cd-timeline-block:nth-child(odd) {
+    text-align: right;
+  }
+
+/*
+  ===================================================
+  FAQs
+  ===================================================
+*/
+
+.qa {
+  width: 100%; 
+  margin-right: 0; 
+  padding: 6% 0 6% 0;
+  float: left;
+}
+
+.qa:last-child {
+  padding-bottom: 10%;
+}
+
+#ques {
+  color: #ddf0f9;
+  font-size: 170%;
+  font-family: ProximaNovaBO;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  padding: 0 0 3% 0;
+}
+#ans {
+  color: #ddf0f9;
+  font-size: 140%;
+  font-family: ProximaNovaSB;
+  font-weight: lighter;
+  letter-spacing: 0.15em;
+  line-height: 100%;
+}
+#border {
+  padding-top: 10%;
+  width: 10%;
+  border-bottom: 6px #70b0cf solid;
+}
+#scroll{
+  height: 350px;
+  overflow: auto;
+  margin-bottom: 5%;
+}
+#border1 {
+  padding-top: 2%;
+  width: 10%;
+  border-bottom: 6px #70b0cf solid;
+}
+#content3{
+  width: 60%;
+  vertical-align: bottom;
+  position:relative;
+  top:70%;
+  left: 5%;
+  margin-right:0%;
+}
+
+/*
+  ===================================================
+  Lookback
+  ===================================================
+*/
+
+#caption, #image {
+  display: inline-block;
+}
+
+#lookback1 {
+  width: 100%;
+  margin-right: 0%;
+}
+#caption {
+  color: #ddf0f9;
+  font-family: ProximaNovaSB;
+  letter-spacing: 0.15em;
+  font-size: 140%;
+  width: 40%;
+  position: relative;
+  top: -40%;
+}
+#image {
+  width: 60%;
+}
+#content2 {
+  width: 80%;
+  position: relative;
+  top: 70%;
+  left: 5%;
+  margin-right: 0%;
+}
+.look {
+  width: 100%; 
+  float: right; 
+  padding: 6% 0 6% 0;
+  height: 280px;
+}
+#scroll2{
+  height: 325px;
+  overflow: auto;
+  margin-bottom: 5%;
+}
+
+/*
+  ===================================================
+  css for Joinus
+  ===================================================
+*/
+
+.joinus, #cr {
+  color: #ddf0f9;
+  font-family: ProximaNovaSB;
+  letter-spacing: 0.15em;
+  font-size: 140%;
+}
+#border2 {
+  padding-top: 8.75%;
+  width: 10%;
+  border-bottom: 6px #70b0cf solid;
+}
+
+.joinus {
+  padding: 10% 0 5% 0;
+}
+.joinus:last-child {
+  padding-bottom: 3%;
+  padding-top: 0%;
+}
+#scroll3 {
+  height: 200px;
+  width: 75%;
+
+
+  overflow: auto;
+
+  margin-bottom: 5%;
+}
+#scroll3, #links {
+  display: inline-block;
+}
+
+#joinq{
+  padding-bottom: 2%;
+  font-size: 120%;
+}
+
+#links img{
+  width: 40%;
+  height: auto;
+  -moz-transition:-moz-transform 0.1s ease-in; 
+  -webkit-transition:-webkit-transform 0.1s ease-in; 
+  -o-transition:-o-transform 0.1s ease-in;
+}
+
+#links img:hover{
+  -moz-transform:scale(1.1); 
+  -webkit-transform:scale(1.1);
+  -o-transform:scale(1.1);
+}
+
+
+
+#links {
+  width: 20%;
+  color: #208dab;
+  font-family: ProximaNovaSB;
+  font-size: 150%;
+  vertical-align: top;
+  text-align: center;
+  margin-left: 5%;
+}
+#values {
+  width: 110%;
+}
+
+/*
+  ===================================================
+  Contact Us
+  ===================================================
+*/
+
+.contacts{
+  position: relative;
+  bottom: 0%;
+  right: 18%;
+  height:25em;
+  width: 80%;
+  float: right;
+  display: inline;
+}
+
+#res {
+    display: block;
+    overflow: auto;
+    height: 400px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5%;
+    position: relative;
+    top: 10%;
+  }
+ 
+.contacts #dept{
+  position:relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 2% 0 2% 0;
+
+}
+.contacts #dept {
+    border-bottom: 3px dashed #47aac5;
+}
+.contacts #dept:last-child {
+  border-bottom: none;
+}
+
+.contacts #dept #CGs{
+  height: 70%;
+  width: 33%;
+  padding-top: 4%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.contacts p{
+  text-align: center;
+  color: #ddf0f9;
+}
+.contacts .names{
+  padding-top: 2%;
+  font-family: ProximaNovaBO;
+  letter-spacing: .12em;
+  font-size: 120%;
+  line-height: 1%;
+}
+.contacts .emails, .phones{
+  padding-top: 1%;
+  font-family: ProximaNovaR;
+  letter-spacing: .06em;
+  font-size: 90%;
+  line-height: 1%;
+
+}
+a:link, a:hover, a:active, a:visited{
+  text-decoration: none;
+  color: #ddf0f9;
+}
+.contacts h2{
+  text-align: center;
+  font-family: ProximaNovaEB;
+  color: #ddf0f9;
+  letter-spacing: .15em;
+  font-size: 180%;
+  line-height: 1%;
+  position: relative;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  text-transform: uppercase;
+}
+.contacts .photo{
+  height:70%;
+}
+/*
+  ===================================================
+  Footer
+  ===================================================
+*/
+
+footer {
+  font-family: ProximaNovaLI;
+  font-size: 100%;
+  position: relative;
+  bottom: 0;
+  vertical-align: bottom;
+  text-align: center;
+}
+footer a {
+  display: inline-block;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+footer a:visited, footer a:active, footer a:link{
+  color: #999;
+}
+#nav_footer{
+  display: none;
+  font-size: 100%;
+  position: absolute;
+  bottom: 10%;
+  left: 2%;
+}
+
+/*
+  ===================================================
+  Media Queries
+  ===================================================
+*/
+
+@media all and (max-width:800px) {
+   /* .share-buttons {
+      display: none;
+    }*/
+     #nav_footer{
+      display: inline;
+    }
+    #nav_bar_soc_med{
+      display: inline;
+    }
+    .social-media {
+      display: none;
+    }
+    .viewcontainer {
+      width: 100%;
+      height: 90%;
+    }
+    #MI{
+      padding-top: 5%;
+    }
+    footer {
+      display: none;
+    }
+/*
+  ===================================================
+  Media Queries for Lookback
+  ===================================================
+*/
+    #content2 {
+      width: 100%;
+      height: 90%;
+      position: relative;
+      left: 0;
+      text-align: center;
+    }
+    #border, #border1, #border2, #border4 {
+       padding-top: 5%;
+      width: 90%;
+      margin-right: 0;
+      border-bottom: 6px #70b0cf solid;
+    }
+    .title {
+      padding-top: 10%;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      left: 5%;
+    }
+    .title h1 {
+      font-size: 300%; 
+      line-height: 20%;
+    }
+    .title h4 {
+      font-size: 100%; 
+      line-height: normal;
+    }
+    #lookback1 {
+      width: 90%;
+    }
+    #lookback1, #border1 {
+      margin-right: 0%;
+      position: relative;
+      left: 5%;
+    }
+    #caption, #image {
+      padding: 4%;
+      display: block;
+      width: 90%;
+
+    }
+      #caption {
+      top: 8%;
+      padding: 1%;
+      display: block;
+      width: 90%;
+    
+    }
+
+
+    #scroll2 {
+      height: 400px;
+    }
+    #look {
+      margin: 2% 0;
+    }
+
+/*
+  ===================================================
+  Media Queries for JoinUs
+  ===================================================
+*/
+
+  #content {
+    padding-top: 10%;
+    width: 100%;
+    height: 90%;
+    position: relative;
+    left: 0;
+  }
+  #scroll3, #links {
+    display: block;
+  }
+  #values {
+    width: 90%;
+  }
+  #values, #border2, #cr {
+    margin-right: 0%;
+    position: relative;
+    left: 5%;
+  }
+  #scroll3 {
+    height: 220px;
+    width: 100%;
+    margin-bottom: 0;
+    overflow: auto;
+  }
+  #cr {
+    width: 90%;
+    text-align: center;
+  }
+  #links {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  #links img{
+    padding-top: 13%;
+    width: 20%;
+    height: auto;
+  }
+  #links a {
+    cursor: pointer;
+  }
+  /*
+  ===================================================
+  Media Queries for Arrow
+  ===================================================
+  */
+  #dir {
+    left: 45%;
+  }
+  /*
+  ===================================================
+  Media Queries for FAQs
+  ===================================================
+  */
+
+  #content3 {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    left: 0;
+    text-align: center;
+  }
+  #scroll {
+    width: 100%;
+    height: 400px;
+  }
+  #faqs, #border {
+    margin-right: 0%;
+    position: relative;
+    left: 5%;
+  }
+  .qa:last-child {
+    padding-bottom: 5%;
+  }
+  .qa:first-child {
+    padding-top: 6%;
+  }
+  #faqs {
+    width: 90%;
+  }
+
+  /*
+  ===================================================
+  Media Queries for ContactUs
+  ===================================================
+  */
+
+  #contact_us_title{
+    padding-bottom: 10%;
+  }
+
+  .buttons, .images {
+    display: none;
+  }
+  .contacts {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    left: 0;
+    text-align: center;
+    float: none;
+  }
+  #over {
+    display: none;
+  }
+  #res {
+    display: block;
+    overflow: scroll;
+    height: 350px;
+    width: 90%;
+    margin: 0;
+    margin-bottom: 3%;
+  }
+  #res, #border4 {
+    margin-right: 0%;
+    position: relative;
+    left: 5%;
+  }
+  #dept h2 {
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+  }
+  #dept:last-child h2 {
+    padding-bottom: 15%;
+  }
+
+  #temp {
+    padding-top: 3%;
+  }
+
+   .contacts .names {
+    line-height: normal;
+  }
+  .contacts h2 {
+    line-height: normal;
+  } 
+  .contacts #dept #CGs{
+    height: 70%;
+    width: 50%;
+    padding-top: 2%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  }
+ 
+  /*
+  ===================================================
+  Media Queries for AboutUs
+  ===================================================
+  */
+
+  #timeline {
+    display: none;
+  }
+  #timeline1, #counters {
+    display: block;
+    width: 90%;
+    margin-right: 0%;
+    position: relative;
+    left: 5%;
+    margin-top: 1%;
+  }
+  #counters {
+    height: 15%;
+    vertical-align: bottom;
+    left: 2.5%;
+    margin-top: 2%;
+  }
+  #timeline1 {
+    padding-top: 15%;
+    height: 80%;
+    vertical-align: top;
+    color: #ddf0f9;
+    letter-spacing: 0.1em;
+    font-family: ProximaNovaSB;
+  }
+  #timeline1 div {
+    margin: 1.5% 0;
+    padding: 2% 0;
+    text-align: center;
+  }
+  #timeline1 span {
+    display: block;
+    font-size: 190%;
+    padding-top: 1%;
+  }
+  #timeline1 #abt {
+    font-size: 145%;
+  }
+  #events {
+    vertical-align: top;
+    padding-top: 16%;
+  }
+  #enc {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    padding: 0 1.5%;
+  }
+  .count {
+    font-size: 275%;
+  }
+  .type {
+    margin-bottom: 0%;
+    font-size: 130%;
+  }
+
+}
+
+
+
+ 
+ /*
+  ===================================================
+  Additional media queries
+  ===================================================
+  */
+
+@media (min-width: 850px)and (max-width: 1060px){
+  #contact_us_title{
+    width:100%;
+    text-align: center;
+    position: relative;
+    left: 5%;
+  }
+  .contacts #dept #temp .names{
+    line-height: normal;
+  }
+    #MI{
+    padding-top: 1.5%;
+  }
+}
+@media(min-width: 550px) and (max-width: 800px){/*just for i pad*/
+
+  #content2 #scroll2 {
+    height: 600px;
+  }
+  #scroll3{
+    height: 380px;
+  }
+  #scroll{
+    height: 600px;
+  }
+}
+@media (min-width: 800px)and (max-width: 850px){
+  .title{
+    width:100%;
+    text-align: center;
+    position: relative;
+    left: 5%;
+  }
+  .contacts #dept #temp .names{
+    line-height: normal;
+  }
+  .contacts #dept #temp .images{
+    width:80%;
+    height: 80%;
+  }
+  #MI{
+    padding-top: 3%;
+  }
+}
+@media all and (max-width:550px) {
+
+  .Title{
+    top:18%;
+  }
+  #timeline1 #abt {
+    font-size: 90%;
+  }
+  footer {
+   display: none;
+  }
+  .count {
+    font-size: 140%;
+  }
+  .type {
+    font-size: 100%;
+  }
+
+  #ques{
+    font-size:140%;
+  }
+
+  #ans {
+    font-size:  90%;
+  }
+  #MI{
+    padding-top: 5%;
+  }
+  #insti{
+    padding-bottom: 5%;
+  }
+
+  .contacts .emails, .phones{
+    font-size: 70%;
+  }
+  .title h1{
+    font-size: 190%;
+  }
+  #timeline1 #abt1 {
+    font-size: 130%;
+  }
+  #timeline1 div{
+    padding: 3%;
+  }
+  #image img{
+    width: 90%;
+    height: auto;
+  }
+
+  #caption {
+    position: relative;
+    top: 0;
+    font-size: 120%;   
+  }
+  #content{
+    font-size: 80%;
+  }
+  #border2{
+    padding-top: 4%;
+  }
+}
+
+/*
+  ===================================================
+  Scroll Bar
+  ===================================================
+*/
+
+
+/* Let's get this party started */
+#res::-moz-scrollbar, #scroll::-moz-scrollbar, #scroll2::-moz-scrollbar, #scroll3::-moz-scrollbar {
+    width: 1%;
+}
+ 
+/* Track */
+#res::-moz-scrollbar-track, #scroll::-moz-scrollbar-track, #scroll2::-moz-scrollbar-track, #scroll3::-moz-scrollbar-track {
+    -moz-box-shadow: inset 0 0 0.5% rgba(0,0,0,0.3); 
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+}
+ 
+/* Handle */
+#res::-moz-scrollbar-thumb, #scroll::-moz-scrollbar-thumb, #scroll2::-moz-scrollbar-thumb, #scroll3::-moz-scrollbar-thumb {
+    -moz-border-radius: 20%;
+    border-radius: 10px;
+    background: #999; 
+    -moz-box-shadow: inset 0 0 0.5% rgba(0,0,0,0.5); 
+}
+#res::-moz-scrollbar-thumb:window-inactive, #scroll::-moz-scrollbar-thumb:window-inactive, #scroll2::-moz-scrollbar-thumb:window-inactive, #scroll3::-moz-scrollbar-thumb:window-inactive {
+  background: #888; 
+}
+
+#res::-webkit-scrollbar, #scroll::-webkit-scrollbar, #scroll2::-webkit-scrollbar, #scroll3::-webkit-scrollbar {
+    width: 1%;
+}
+ 
+/* Track */
+#res::-webkit-scrollbar-track, #scroll::-webkit-scrollbar-track, #scroll2::-webkit-scrollbar-track, #scroll3::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0.5% rgba(0,0,0,0.3); 
+    -webkit-border-radius: 20%;
+    border-radius: 20%;
+}
+ 
+/* Handle */
+#res::-webkit-scrollbar-thumb, #scroll::-webkit-scrollbar-thumb, #scroll2::-webkit-scrollbar-thumb, #scroll3::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 20%;
+    border-radius: 10px;
+    background: #999; 
+    -webkit-box-shadow: inset 0 0 0.5% rgba(0,0,0,0.5); 
+}
+#res::-webkit-scrollbar-thumb:window-inactive, #scroll::-webkit-scrollbar-thumb:window-inactive, #scroll2::-webkit-scrollbar-thumb:window-inactive, #scroll3::-webkit-scrollbar-thumb:window-inactive {
+  background: #888; 
+}
+
+/*
+  ===================================================
+  Transitions
+  ===================================================
+*/
+
+.title, .social-media, #content2, .contacts, #content, #content3, #timeline, #counters, .jumbotron, .row marketing {
+  -webkit-animation-name: fade-in; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fade-in {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+/* Standard syntax */
+@keyframes fade-in {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+
+/*
+  ===================================================
+  Timeline Animation
+  ===================================================
+*/
+#num1{
+  -webkit-animation-name: appearA; /* Chrome, Safari, Opera */
+  animation-name: appearA;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+@-webkit-keyframes appearA{
+  0% {opacity:0;}
+   100% {opacity:1;}
+}
+@keyframes appearA{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+#num2{
+  -webkit-animation-name: appearB; /* Chrome, Safari, Opera */
+  animation-name: appearB;
+  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.6s;
+}
+@-webkit-keyframes appearB{
+  0% {opacity:0;}
+  50%{opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes appearB{
+  0% {opacity:0;}
+  50%{opacity:0;}
+  100% {opacity:1;}
+}
+
+#num3{
+  -webkit-animation-name: appearC; /* Chrome, Safari, Opera */
+  animation-name: appearC;
+  -webkit-animation-duration: 2.4s;
+  animation-duration: 2.4s;
+}
+@-webkit-keyframes appearC{
+  0% {opacity:0;}
+  67%{opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes appearC{
+  0% {opacity:0;}
+  67%{opacity:0;}
+  100% {opacity:1;}
+}
+#num4{
+  -webkit-animation-name: appearD; /* Chrome, Safari, Opera */
+  animation-name: appearD;
+  -webkit-animation-duration: 3.2s;
+  animation-duration: 3.2s;
+}
+@-webkit-keyframes appearD{
+  0% {opacity:0;}
+  75%{opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes appearD{
+  0% {opacity:0;}
+  75%{opacity:0;}
+  100% {opacity:1;}
+}
+#num5{
+  -webkit-animation-name: appearE; /* Chrome, Safari, Opera */
+  animation-name: appearE;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+@-webkit-keyframes appearE{
+  0% {opacity:0;}
+  80%{opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes appearE{
+  0% {opacity:0;}
+  80%{opacity:0;}
+  100% {opacity:1;}
+}
+#num6{
+  -webkit-animation-name: appearF; /* Chrome, Safari, Opera */
+  animation-name: appearF;
+  -webkit-animation-duration: 4.8s;
+  animation-duration: 4.8s;
+}
+@-webkit-keyframes appearF{
+  0% {opacity:0;}
+  83%{opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes appearF{
+  0% {opacity:0;}
+  83%{opacity:0;}
+  100% {opacity:1;}
+}
