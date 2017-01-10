@@ -1,10 +1,628 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#263238">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#263238">
+
+    <!-- Site Properties -->
+    <title>CRMD</title>
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/semantic/dist/semantic.css">
+    <link rel="stylesheet" type="text/css" href="../bower_components/animate.css/animate.css">
+
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/semantic/dist/semantic.min.js"></script>
+    <!--script src="../bower_components/semantic/dist/components/sidebar.min.js"></script>
+    <script src="../bower_components/semantic/dist/components/dropdown.min.js"></script>
+    <script-- src="../bower_components/semantic/dist/components/transition.css"></script-->
+
+    <style type="text/css">
+        .hidden.menu {
+            display: none;
+        }
+
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+
+        .masthead .ui.menu .ui.button {
+            margin-left: 0.5em;
+        }
+
+        .masthead .text {
+            margin-top: 5em;
+            font-weight: normal;
+        }
+
+        .masthead h1.ui.header {
+            margin-top: 2em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+            display: none;
+        }
+
+        .ui.vertical.stripe {
+            padding: 8em 0em;
+        }
+
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 3em;
+        }
+
+        .ui.vertical.stripe .floated.image {
+            clear: both;
+        }
+
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+
+        .footer.segment {
+            padding: 5em 0em;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+
+        #mobile-nav {
+            display: none;
+        }
+
+        m-scene .scene_element {
+            animation-duration: 0.75s;
+            transition-timing-function: ease-in;
+            animation-fill-mode: both;
+        }
+
+        .m-scene.is-exiting .scene_element {
+            animation-direction: alternate-reverse;
+        }
+
+        @-moz-keyframes pulsate {
+            from {
+                -moz-transform: scale(0.25);
+                opacity: 1.0;
+            }
+            95% {
+                -moz-transform: scale(1.3);
+                opacity: 0;
+            }
+            to {
+                -moz-transform: scale(0.3);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes pulsate {
+            from {
+                -webkit-transform: scale(0.25);
+                opacity: 1.0;
+            }
+            95% {
+                -webkit-transform: scale(1.3);
+                opacity: 0;
+            }
+            to {
+                -webkit-transform: scale(0.3);
+                opacity: 0;
+            }
+        }
+
+        .ui.segment .list {
+            margin: 1.5em 1em;
+            font-size: 1.2em;
+        }
+
+        .ui.segment .list p{
+            margin-left: 1em;
+        }
+
+        @media only screen and (max-width: 700px) {
+            #large-nav {
+                display: none;
+            }
+
+            #mobile-nav {
+                display: block;
+            }
+
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+
+            .masthead.segment {
+                min-height: 200px;
+            }
+
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+
+            .ui.sidebar {
+                overflow: visible !important;
+            }
+
+            #main {
+                padding-top: 0;
+            }
+
+            .ui.segment .list li{
+                margin: 0.5em 0.2em;
+                font-size: 0.9em;
+            }
+
+            .ui.segment .list p{
+                margin-left: 0.5em;
+            }
+
+        }
+
+        body {
+            background-color: #1B1C1D;
+            color: rgba(0, 0, 0, .87);
+        }
+
+
+
+    </style>
+    <script>
+        $(document)
+                .ready(function () {
+                    // create sidebar and attach to menu open
+                    $('.ui.sidebar')
+                            .sidebar('setting', 'transition', 'overlay')
+                            .sidebar('attach events', '.toc.item')
+                    ;
+                    $('.ui.dropdown')
+                            .dropdown()
+                    ;
+
+                })
+        ;
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-80789003-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </head>
 <body>
-$END$
+
+<div class="ui inverted sidebar top menu">
+    <a class="item" href="../crmd.html">Home</a>
+    <a class="item" href="scores.html">Theme</a>
+    <a class="active item">Rules</a>
+</div>
+
+<div class="pusher" id="main" style="background-color: #1B1C1D">
+
+    <div class="ui inverted vertical masthead center aligned segment">
+
+        <div class="ui container scene_element slideInDown">
+            <div class="ui large fluid four item secondary inverted pointing menu">
+                <a class="toc item">
+                    <div class="ui black image label">
+                        <i class="content icon"></i>
+                        Menu
+                    </div>
+                </a>
+                <a class="item" href="../crmd.html">Home</a>
+                <a class="item" href="scores.html">Theme</a>
+                <a class="active item">Rules</a>
+            </div>
+        </div>
+
+        <div class="ui inverted segment">
+            <h1 class="ui header">Rules & Regulations</h1>
+        </div>
+
+    </div>
+    <div class="ui inverted segment">
+
+        <div class="ui inverted horizontal divider">
+            <div class="ui inverted header"><h1>General Rules</h1></div>
+        </div>
+
+        <ol class="ui inverted relaxed list">
+            <li>
+                <p>
+                    One speaker of the team makes the opening speech while the other makes the closing speech.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The proposition starts the debate; the proposition gives the first opening speech, followed
+                    by the opposition’s opening speech.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The opposition raises the first point in the refutation round.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The last thirty seconds of Refutation Round at any stage of the competition is reserved for
+                    ‘The Concluding Statement’. It is a short concise and precise statement that sums up a
+                    team’s argument.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The debate is concluded by the closing speech, first from the opposition and then the
+                    proposition.
+                </p>
+            </li>
+            <li>
+                <p>
+                    No new points may be introduced in the closing speech. If a certain team does bring up a
+                    new point; the opposition may request the moderator an opportunity to point out the new
+                    points at the end of the closing speech which will lead to negative marking.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The topics will be given to the teams 15 minutes prior to their debate <sup>[1]</sup> . In these 15 minutes
+                    they are strictly prohibited to use the internet or any other reading material. They will be
+                    provided with papers and writing material to note-down their points which they can carry
+                    with themselves into the debate.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Personal comments of any kind directed against the opposite team are strictly prohibited.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Participants cannot comment on the opposite team’s stance or statements made in
+                    previous debates of the competition.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Negative marking for exceeding time limit.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Participants will be judged on the following criteria: Analysis, confidence, engagement with
+                    opposition, organization of points, argumentation level and rapport established with
+                    partner.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Discrepancies of any sort during the debate will be resolved at the moderator’s discretion.
+                    The decision will be final and binding.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Any electronic devices will not be allowed during the debate.
+                </p>
+            </li>
+        </ol>
+
+        <div>
+            <p>
+                <b><u>NOTE :</u></b><br>
+                [1.] The topic for the first round of debate (League Round 1) will be given one week prior to the debate.<br>
+                In the next three rounds (League Round 2 &amp; 3 and the Quarter Finals), the topics will be given 15 minutes prior to the debate.<br>
+                For the Semi-finals and the Finals the topics will be given one day in advance.
+            </p>
+        </div>
+
+        <div class="ui inverted horizontal divider" style="margin-top:3em">
+            <div class="ui inverted header"><h1>Time Stipulation</h1></div>
+        </div>
+
+        <div class="ui inverted center aligned segment">
+            <h2>League &amp; Quaters</h2>
+        </div>
+
+        <ol class="ui inverted relaxed list">
+            <li>
+                <p>
+                    4 minutes opening and closing speech.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Warning bell after 3 minutes 45 seconds (1 bell).
+                </p>
+            </li>
+            <li>
+                <p>
+                    No new points can be introduced after the warning bell for the opening speaker. A
+                    contestant can however complete his current point and summarize.
+                </p>
+            </li>
+            <li>
+                <p>
+                    2 bells after 4 minutes are completed.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Contestants are expected to conclude in the next 15 seconds. He/she would not be allowed
+                    to speak after 4 min 15 seconds.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The time for the refutation rounds is 10 minutes.
+                </p>
+            </li>
+        </ol>
+
+        <div class="ui inverted center aligned segment">
+            <h2>Semi-finals &amp; Finals</h2>
+        </div>
+
+        <ol class="ui inverted relaxed list">
+            <li>
+                <p>
+                    5 minutes opening and closing speech.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Warning bell after 4 minutes 45 seconds (1 bell).
+                </p>
+            </li>
+            <li>
+                <p>
+                    No new points can be introduced after the warning bell for the opening speaker. A
+                    contestant can however complete his current point and summarize.
+                </p>
+            </li>
+            <li>
+                <p>
+                    2 bells after 5 minutes are completed.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Contestants are expected to conclude in the next 15 seconds. He/she would not be allowed
+                    to speak after 5 min 15 seconds.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The time for the refutation rounds is 15 minutes.
+                </p>
+            </li>
+        </ol>
+
+        <div class="ui inverted horizontal divider">
+            <div class="ui inverted header"><h1>Format</h1></div>
+        </div>
+
+        <ol class="ui inverted relaxed list">
+            The deabate comprises of 4 Rounds :
+            <br><br>
+            <li><p>3 League Rounds</p></li>
+            <li><p>Quater Finals</p></li>
+            <li><p>Semi Finals</p></li>
+            <li><p>Finals</p></li>
+        </ol>
+
+        <div class="ui inverted center aligned segment">
+            <h2>Structure of Rounds</h2>
+        </div>
+
+        <div class="ui stackable centered grid">
+            <div class="ui centered fourteen wide column">
+                <div class="ui segment">
+                    <table class="ui structured large fixed table">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="center aligned">
+                                    <div class="ui huge label">League Rounds</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="center aligned">
+                                <td>Opening proposition speaker</td>
+                                <td>4 minutes</td>
+                            </tr>
+                            <tr class="center aligned">
+                                <td>Opening opposition speaker</td>
+                                <td>4 minutes</td>
+                            </tr>
+                            <tr class="center aligned">
+                                <td>Refutation Round</td>
+                                <td>10 minutes</td>
+                            </tr>
+                            <tr class="center aligned">
+                                <td>Concluding proposition speaker</td>
+                                <td>4 minutes</td>
+                            </tr>
+                            <tr class="center aligned">
+                                <td>Concluding opposition speaker</td>
+                                <td>4 minutes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="ui centered fourteen wide column">
+                <div class="ui segment">
+                    <table class="ui structured large fixed table">
+                        <thead>
+                        <tr>
+                            <th colspan="2" class="center aligned">
+                                <div class="ui huge label">Quater Finals</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="center aligned">
+                            <td>Opening proposition speaker</td>
+                            <td>4 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Opening opposition speaker</td>
+                            <td>4 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Refutation Round</td>
+                            <td>10 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Concluding proposition speaker</td>
+                            <td>4 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Concluding opposition speaker</td>
+                            <td>4 minutes</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="ui centered fourteen wide column">
+                <div class="ui segment">
+                    <table class="ui structured large fixed table">
+                        <thead>
+                        <tr>
+                            <th colspan="2" class="center aligned">
+                                <div class="ui huge label">Semi Finals</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="center aligned">
+                            <td>Opening proposition speaker</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Opening opposition speaker</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Refutation Round</td>
+                            <td>15 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Concluding proposition speaker</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Concluding opposition speaker</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="ui centered fourteen wide column">
+                <div class="ui segment">
+                    <table class="ui structured large fixed table">
+                        <thead>
+                        <tr>
+                            <th colspan="2" class="center aligned">
+                                <div class="ui huge label">Finals</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="center aligned">
+                            <td>Opening proposition speaker</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Opening opposition speaker</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Refutation Round</td>
+                            <td>20 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Concluding proposition speaker</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        <tr class="center aligned">
+                            <td>Concluding opposition speaker</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ui inverted footer segment">
+
+    </div>
+
+</div>
+
 </body>
 </html>

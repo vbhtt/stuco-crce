@@ -1,10 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#263238">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#263238">
+
+    <!-- Site Properties -->
+    <title>CRMD</title>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/semantic.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.css">
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/semantic/dist/semantic.min.js"></script>
+    <script src="bower_components/semantic/dist/components/sidebar.min.js"></script>
+    <script src="bower_components/semantic/dist/components/dropdown.min.js"></script>
+    <script src="bower_components/semantic/dist/components/transition.css"></script>
+
+    <style type="text/css">
+        .hidden.menu {
+            display: none;
+        }
+
+        #main {
+            margin-top: 1em;
+        }
+
+        .pusher .ui.segment {
+            margin: 0;
+            padding-top: 2em;
+            padding-bottom: 6em;
+        }
+
+        .pusher h1.ui.header {
+            margin-top: 2em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+
+        .pusher .text {
+            font-size: 1.5em;
+            margin-top: 5em;
+            font-weight: normal;
+        }
+
+        .pusher h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+            display: none;
+        }
+
+        .masthead.segment {
+            min-height: 680px;
+            padding: 1em 0em;
+        }
+
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+
+        .masthead .ui.menu .ui.button {
+            margin-left: 0.5em;
+        }
+
+        .masthead .text {
+            margin-top: 5em;
+            font-weight: normal;
+        }
+
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+            display: none;
+        }
+
+        .ui.vertical.stripe {
+            padding: 8em 0em;
+        }
+
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 3em;
+        }
+
+        .ui.vertical.stripe .floated.image {
+            clear: both;
+        }
+
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+
+        #footer.segment {
+            padding-bottom: 2em;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+
+        #mobile-nav {
+            display: none;
+        }
+
+        m-scene .scene_element {
+            animation-duration: 0.75s;
+            transition-timing-function: ease-in;
+            animation-fill-mode: both;
+        }
+
+        .m-scene.is-exiting .scene_element {
+            animation-direction: alternate-reverse;
+        }
+
+        @-moz-keyframes pulsate {
+            from {
+                -moz-transform: scale(0.25);
+                opacity: 1.0;
+            }
+            95% {
+                -moz-transform: scale(1.3);
+                opacity: 0;
+            }
+            to {
+                -moz-transform: scale(0.3);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes pulsate {
+            from {
+                -webkit-transform: scale(0.25);
+                opacity: 1.0;
+            }
+            95% {
+                -webkit-transform: scale(1.3);
+                opacity: 0;
+            }
+            to {
+                -webkit-transform: scale(0.3);
+                opacity: 0;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            #large-nav {
+                display: none;
+            }
+
+            #mobile-nav {
+                display: block;
+            }
+
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+
+            .masthead.segment {
+                min-height: 240px;
+            }
+
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+
+            .pusher h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+                font-weight: normal;
+            }
+
+            .pusher .text {
+                font-size: 1.33em;
+                margin-top: 2em;
+                font-weight: normal;
+            }
+
+            .ui.sidebar {
+                overflow: visible !important;
+            }
+
+            #main {
+                padding-top: 0;
+            }
+
+        }
+
+    </style>
+    <script>
+        $(document)
+                .ready(function () {
+                    // create sidebar and attach to menu open
+                    $('.ui.sidebar')
+                            .sidebar('setting', 'transition', 'overlay')
+                            .sidebar('attach events', '.toc.item')
+                    ;
+                    $('.ui.dropdown')
+                            .dropdown()
+                    ;
+
+                })
+        ;
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-80789003-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </head>
-<body>
-$END$
+<body class="m-scene" style="background-color: #1B1C1D !important;">
+
+<div class="ui inverted sidebar top menu">
+    <a class="active item">Home</a>
+    <a class="item" href="crmd/scores.html">Theme</a>
+    <a class="item" href="crmd/rules.html">Rules</a>
+</div>
+
+<div class="ui container scene_element slideInDown"  style="background-color: #1B1C1D; margin-top: 0.5em;">
+    <div class="ui huge fluid three item secondary inverted pointing menu">
+        <a class="toc item">
+            <div class="ui black image label">
+                <i class="content icon"></i>
+                Menu
+            </div>
+        </a>
+        <a class="active item">Home</a>
+        <a class="item" href="crmd/scores.html">Theme</a>
+        <a class="item" href="crmd/rules.html">Rules</a>
+    </div>
+</div>
+<div class="pusher" id="main" style="background-color: #1B1C1D;">
+    <div class="ui inverted vertical masthead center aligned segment"
+         style="background-image: url(images/cover-images/crmd.jpg);
+                background-size: 100% 100%;">
+    </div>
+    <div class="ui inverted center aligned segment container">
+        <h1 class="ui header">About Us</h1>
+        <div class="ui text">
+            <p>
+                The National level Fr. Conceicao Rodrigues Memorial
+                Debate is a prestigious Debate Competition in Mumbai,
+                hosted annually by <strong>Fr. Conceicao Rodrigues College of
+                Engineering, Bandra. </strong><br>Inaugurated in the year 1999 as a
+                debate competition for colleges within Mumbai, it
+                became a National level Competition in 2012. It is a 2-
+                day event usually held in the month of September
+                organized by the Students’ Council, CRCE. The debate
+                aims to provide a forum for today’s youth to articulate
+                views and engage in a dialogue on various affairs that
+                affect the life of the common man, directly or otherwise.
+            </p>
+        </div>
+    </div>
+    <div class="ui image">
+
+    </div>
+    <div class="ui inverted vertical segment" id="footer">
+        <div class="ui inverted section divider"></div>
+        <div class="ui center aligned container">
+            <div class="ui container">
+                <p>Copyright © 2016 Students' Council</p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

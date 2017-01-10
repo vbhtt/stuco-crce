@@ -1,0 +1,93 @@
+
+*{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.crceimg{
+	float:left; 
+	padding-top:10px;
+}
+
+.stucologo{
+	float:right
+}
+
+.stucotitle{
+	padding-top:100px;
+	padding-bottom:50px;
+}
+
+.stucotitle h1{
+	font-size: 4em;
+}
+
+.stucotitle h2{
+	font-size: 2em;
+}
+
+hr{
+	background-color: #6a5750;
+	margin-top: -1px;
+   }
+
+.heading{
+	font-size: 50px;
+}
+
+.shortinfo{
+	font-size: 15px;
+	line-height: 20px;
+}
+
+
+/*start of the animation*/
+	
+	.wrapper{
+		padding-top: 10px;
+	}
+
+	.wrapper img{
+
+		height: 100%;
+		width: 100%;
+	}
+
+	.content{
+		visibility: hidden;
+		width:100%;
+		transition: transform 300ms;
+	}
+
+	.wrapper:hover .content{
+		visibility: visible;
+		transform: translateY(-125px);
+		height: 100%;	
+		
+	}
+
+	.wrapper:hover img{
+
+		filter: blur(1px);
+	}
+
+	.text_area{
+		color: white;
+		text-align: center;
+		font-size: 15px;
+		position: absolute;
+		margin-left:20px;
+	}
+/*end of the animation*/
+.parallax{
+	height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+.crceimg .col-xs-*{
+
+	width: 100px;
+	height: 100px;
+}

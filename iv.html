@@ -1,575 +1,557 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Standard Meta -->
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>INDUSTRIAL VISIT</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/iv.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.mini.css">
+    <link rel="stylesheet" type="text/css" href="css/hover.css">
+    <script type="text/javascript" src="js/wow.mini.js"></script>
+    <script type="text/javascript">
+		new WOW().init();
+	</script>
+	<script type="text/javascript" src="js/font-awesome.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+	<script type="text/javascript" src="js/font-awesome.js"></script>
 
-    <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/images/favicon/manifest.json">
-    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#263238">
-    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
-    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#263238">
-
-    <!-- Site Properties -->
-    <title>CRCE Students' Council</title>
-
-    <link rel="stylesheet" type="text/css" href="./bower_components/semantic/dist/semantic.min.css">
-
-
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="./bower_components/semantic/dist/semantic.min.js"></script>
-    <script src="bower_components/semantic/dist/components/sidebar.min.js"></script>
-    <script src="bower_components/semantic/dist/components/dropdown.min.js"></script>
-    <script src="bower_components/semantic/dist/components/transition.min.js"></script>
-    <script src="bower_components/semantic/dist/components/visibility.min.js"></script>
-
-    <style type="text/css">
-        .hidden.menu {
-            display: none;
-        }
-
-        .masthead.segment {
-            min-height: 700px;
-            padding: 1em 0em;
-        }
-
-        .masthead .logo.item img {
-            margin-right: 1em;
-        }
-
-        .masthead .ui.menu .ui.button {
-            margin-left: 0.5em;
-        }
-
-        .masthead h1.ui.header {
-            margin-top: 3em;
-            margin-bottom: 0em;
-            font-size: 4em;
-            font-weight: normal;
-        }
-
-        .masthead h2 {
-            font-size: 1.7em;
-            font-weight: normal;
-        }
-
-        .ui.vertical.stripe {
-            padding: 8em 0em;
-        }
-
-        .ui.vertical.stripe h3 {
-            font-size: 2em;
-        }
-
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
-            margin-top: 3em;
-        }
-
-        .ui.vertical.stripe .floated.image {
-            clear: both;
-        }
-
-        .ui.vertical.stripe p {
-            font-size: 1.33em;
-        }
-
-        .ui.vertical.stripe .horizontal.divider {
-            margin: 3em 0em;
-        }
-
-        .quote.stripe.segment {
-            padding: 0em;
-        }
-
-        .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
-
-        .footer.segment {
-            padding: 5em 0em;
-        }
-
-        .secondary.pointing.menu .toc.item {
-            display: none;
-        }
-
-        .ui.menu .item img.logo {
-            margin-right: 1.5em;
-        }
-
-        .main.container {
-            margin-top: 7em;
-        }
-
-        .wireframe {
-            margin-top: 2em;
-        }
-
-        .ui.footer.segment {
-            margin: 5em 0em 0em;
-            padding: 5em 0em;
-        }
-
-        #mobile-nav {
-            display: none;
-        }
-
-        #main {
-            padding-top: 60px;
-        }
-
-        @media only screen and (max-width: 700px) {
-            #large-nav {
-                display: none;
-            }
-
-            #mobile-nav {
-                display: block;
-            }
-
-            .secondary.pointing.menu .item,
-            .secondary.pointing.menu .menu {
-                display: none;
-            }
-
-            .secondary.pointing.menu .toc.item {
-                display: block;
-            }
-
-            .masthead.segment {
-                min-height: 350px;
-            }
-
-            .masthead h1.ui.header {
-                font-size: 2em;
-                margin-top: 1.5em;
-            }
-
-            .masthead h2 {
-                margin-top: 0.5em;
-                font-size: 1.5em;
-            }
-
-            .ui.sidebar {
-                overflow: visible !important;
-            }
-
-            #main {
-                padding-top: 0;
-            }
-        }
-
-        body {
-            background-color: #1B1C1D;
-            color: rgba(0, 0, 0, .87);
-        }
-    </style>
-    <script>
-        $(document)
-                .ready(function () {
-                    // create sidebar and attach to menu open
-                    $('.ui.sidebar')
-                            .sidebar('setting', 'transition', 'overlay')
-                            .sidebar('attach events', '.toc.item')
-                    ;
-                    $('.ui.dropdown')
-                            .dropdown()
-                    ;
-
-                    $('.ui.rating')
-                      .rating('disable')
-                    ;
-
-                })
-        ;
-    </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-80789003-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
 
 </head>
-<body>
+<body style="background-image: url(img/background.jpg);">
 
-<div class="ui inverted sidebar top menu">
-    <a href="index.html" class="item">Home</a>
-    <div class="ui simple dropdown item">
-        Activities
-        <i class="dropdown icon"></i>
-        <div class=" menu">
-            <a class="item" href="http://crescendo.fragnel.edu.in" target="_blank">Crescendo</a>
-            <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate" target="_blank">Fr. Conceicao Rodrigues Memorial Debate</a>
-            <a class="item" href="http://euphoria.gq" target="_blank">Euphoria</a>
-            <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
-        </div>
-    </div>
-    <a href="about.html" class="item">About Us</a>
-</div>
+	<!--start of the page header-->
+	<section id="page-header">
+		
+	</section>
+	<!--end of the page header-->
 
-<div class="ui fixed inverted menu" id="large-nav">
-    <div class="ui container">
-        <a href="index.html" class="header item">
-            <img class="logo" src="images/favicon/favicon-32x32.png">
-            CRCE Students' Council</a>
-        <a href="index.html" class="item">Home</a>
-        <div class="ui dropdown item">
-            Activities
-            <i class="dropdown icon"></i>
-            <div class=" menu">
-                <a class="item" href="http://crescendo.fragnel.edu.in" target="_blank">Crescendo</a>
-                <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate" target="_blank">Fr. Conceicao Rodrigues Memorial Debate</a>
-                <a class="item" href="http://euphoria.gq" target="_blank">Euphoria</a>
-                <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
-            </div>
-        </div>
-        <a href="about.html" class="item">About Us</a>
-    </div>
-</div>
+	<!--start of the page content-->
+	<section id="page-content" style="margin-top:-78px;" class="wow container">
+		
+		<div style="margin-bottom:250px;">
+			<span><center class="mainHead wow fadeInUp"> Industrial Visit </center> </span>	
+			<br>
 
-<div class="pusher" id="parent" style="background-color: #1B1C1D">
-    <div class="ui inverted vertical masthead center aligned segment">
-        <div class="ui container">
-            <div class="ui large secondary inverted pointing menu">
-                <a class="header toc item">
-                    <i class="sidebar icon"></i>
-                    <img class="logo" src="images/favicon/android-chrome-192x192.png">
-                    CRCE Students' Council
-                </a>
-            </div>
-        </div>
-        <div class="ui inverted center aligned segment" id="main">
-            <h1 class="ui inverted header">Industrial Visit</h1>
-            <!--div class="ui inverted segment">
-                <h2>Registrations have been closed</h2>
-            </div-->
-            <div class="ui one column centered stackable grid container"
-                style="margin-top:1.5em;">
-                <div class="column">
-                    <button class="ui huge primary button" onclick="parent.open('pdfs/Undertaking_Student.pdf')">
-                        Download Student Undertaking<i class="chevron right icon"></i>
-                    </button>
-                </div>
-                <div class="column">
-                    <button class="ui huge primary button" onclick="parent.open('pdfs/Undertaking_Parent.pdf')">
-                        Download Parent Undertaking<i class="chevron right icon"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ui inverted vertical center aligned segment">
+			<div class="row">
 
-        <div class="ui inverted segment">
-            <h1 class="ui header">JODHPUR - JAISLMER - JAIPUR</h1>
-            <h3>(8 Nights and 9 Days)</h3>
-            <br>
-            <h2>Tour Cost : Rs. 11,000 per student</h2>
-        </div>
-        <br>
+				<center>
+					<button type="button" class="btn btn-primary downloadbtn wow slideInLeft" style="font-size:16px;">
+						
+							Download Student Undertaking <i class="fa fa-chevron-right" aria-hidden="true"></i>
+						
+					</button>
 
-        <div class="ui inverted horizontal divider">
-            <h1 class="ui inverted header">Itinerary</h1>
-        </div>
-        <br>
-        <div class="ui single column centered stackable grid container">
-            <div class="centered twelve wide column">
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 1: 27 December, Tuesday</div>
-                    <table class="ui unstackable table">
-                        <tbody>
-                        <tr>
-                            <td class="center aligned"><h3>Board train from Mumbai for Sawai Madhopur</h3></td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">Packed Dinner and Overnight in Train</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+					<button class="btn btn-primary downloadbtn wow slideInRight" type="button" style="font-size:16px;">
+						Download Parent Undertaking <i class="fa fa-chevron-right" aria-hidden="true"></i>
+					</button>
+				</center>
 
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 2: 28 December, Wednesday</div>
-                    <table class="ui unstackable table">
-                        <tbody>
-                        <tr>
-                            <td class="center aligned"><h3>Proceed for Ranthambore</h3></td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Canter Safari in Park after Lunch</h3></td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Proceed to Jaipur in Evening</h3></td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">4 hours to reach Jaipur</td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">Dinner and Overnight in Jaipur</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+			</div>
+		</div>
+
+		<!--start of the Itinerary-->
+		<span><center class="wow zoomIn">Itinerary</center></span><hr width="75%">
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+		  	
+			<!--start of the day 1-->
+			  	<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="dayOne">
+				      <h4 class="panel-title">
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#dayOneDes" aria-expanded="true" aria-controls="dayOneDes">
+				         Day 1: 27 December, Tuesday
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="dayOneDes" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="dayOne">
+				      <div class="panel-body wow slideInUp">
+
+				      	<table class="table table-bordered">
+				      		<tbody>
+
+				      			<tr>
+				      				<td>Board train from Mumbai for Sawai Madhopur</td>
+				      			</tr>
+
+				      			<tr>
+				      				<td class="well">Packed Dinner and Overnight in Train</td>
+				      			</tr>
+
+				      		</tbody>
+				      	</table>
+				      
+				    </div>
+			    </div>
+			<!--end of the day 1-->    
+
+			<!--start of the day 2-->
+			    <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="dayTwo">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dayTwodes" aria-expanded="false" aria-controls="dayTwodes">
+				          Day 2: 28 December, Wednesday
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="dayTwodes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dayTwo">
+				      <div class="panel-body">
+				      <table class="table table-bordered">
+
+				      	<tbody>
+				      		<tr>
+			        			<td>
+			        				Proceed for Ranthambore
+			        			</td>
+			        		</tr>
+
+			        		<tr>
+			        			<td>
+			        				Canter Safari in Park after Lunch
+			        			</td>
+			        		</tr>
+
+			        		<tr>
+			        			<td>
+			        				Canter Safari in Park after Lunch
+			        			</td>
+			        		</tr>
+
+			        		<tr>
+			        			<td class="well">
+			        				4 hours to reach Jaipur
+			        			</td>
+			        		</tr>
+
+			        		<tr>
+			        			<td class="well">
+			        				Dinner and Overnight in Jaipur
+			        			</td>
+			        		</tr>
+
+				      	</tbody>
+
+				      </table>
+						
+				      </div>
+				    </div>
+			  	</div>
+			<!--end of the day 2-->
+
+			<!--start of day 3-->
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="dayThree">
+			      <h4 class="panel-title">
+			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dayThreeDes" aria-expanded="false" aria-controls="dayThreeDes">
+			        	Day 3: 29 December, Thursday
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="dayThreeDes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dayThree">
+			      <div class="panel-body">
+			        <table class="table table-bordered">
+			        	<tbody>
+
+			        		<tr>
+			        			<td>
+			        				Proceed for Industrial Visit after Breakfast
+			        			</td>
+			        		</tr>
+
+			        		<tr>
+			        			<td>
+			        				Proceed for local sightseeing of Jaipur after Lunch
+			        			</td>
+			        		</tr>
+
+			        		<tr>
+			        			<td class="well">
+			        				Dinner and Overnight in Hotel
+			        			</td>
+			        		</tr>
+
+			        	</tbody>
+			        </table>
+			      </div>
+			    </div>
+			  </div>
+			<!--end of day 3-->
+
+			<!--start of day 4-->
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="dayFour">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dayFourDes" aria-expanded="false" aria-controls="dayFourDes">
+				          Day 4: 30 December, Friday
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="dayFourDes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dayFour">
+				      <div class="panel-body">
+				        <table class="table table-bordered">
+				        	<tbody>
+				        		
+				        		<tr>
+				        			<td>
+				        				Proceed to Jodhpur after Breakfast
+				        			</td>
+				        		</tr>
+
+				        		<tr>
+				        			<td class="well">
+				        				7 hours to reach Jodhpur. Lunch enroute
+				        			</td>
+				        		</tr>
+
+				        		<tr>
+				        			<td>
+				        				Reach Jodhpur and check in at Hotel
+				        			</td>
+				        		</tr>
+
+				        		<tr>
+				        			<td>
+				        				Proceed for sightseeing
+				        			</td>
+				        		</tr>
+
+				        		<tr>
+				        			<td class="well">
+				        				Free time in evening for shopping in Jodhpur Market
+				        			</td>
+				        		</tr>
+
+				        		<tr>
+				        			<td>
+				        				Pool Party
+				        			</td>
+				        		</tr>
+
+				        		<tr>
+				        			<td class="well">
+				        				Dinner and Overnight in Hotel
+				        			</td>
+				        		</tr>
 
 
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 3: 29 December, Thursday</div>
-                    <table class="ui unstackable table">
-                        <tbody>
-                        <tr>
-                            <td class="center aligned"><h3>Proceed for Industrial Visit after Breakfast</h3></td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Proceed for local sightseeing of Jaipur after Lunch</h3></td>
-                        </tr>
-                        <!--tr-- class="active">
-                            <td class="center aligned">Sightseeing includes Amer fort and Jalmahal</td>
-                        </tr-->
-                        <tr class="active">
-                            <td class="center aligned">Dinner and Overnight in Hotel</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+				        	</tbody>
+				        </table>
+				      </div>
+		    	    </div>
+		        </div>
+	        <!--end of day 4-->
 
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 4: 30 December, Friday</div>
-                    <table class="ui unstackable table">
-                        <tbody>
-                        <tr>
-                            <td class="center aligned"><h3>Proceed to Jodhpur after Breakfast</h3></td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">7 hours to reach Jodhpur. Lunch enroute</td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Reach Jodhpur and check in at Hotel</h3></td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Proceed for sightseeing</h3></td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">Free time in evening for shopping in Jodhpur Market</td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Pool Party</h3></td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">Dinner and Overnight in Hotel</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+	        <!--start of day 5-->
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="dayFive">
+				      <h4 class="panel-title">
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#dayFiveDes" aria-expanded="false" aria-controls="dayFiveDes">
+				          Day 5: 31 December, Saturday
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="dayFiveDes" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="dayFive">
+				      <div class="panel-body">
+				        <table class="table table-bordered">
+				        	<tbody>
+				        		<tr>
+				        			<td>Proceed for sightseeing and Industrial Visit after Breakfast</td>
+				        		</tr>
+				        		<tr>
+				        			<td>New Year's Eve DJ Night</td>
+				        		</tr>
+				        		<tr>
+				        			<td class="well">Dinner and Overnight in Hotel</td>
+				        		</tr>
+				        	</tbody>
+				        </table>
+				      </div>
+				    </div>
+				</div>
+		     <!--end of day 5-->
 
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 5: 31 December, Saturday</div>
-                    <table class="ui unstackable table">
-                        <tbody>
-                        <tr>
-                            <td class="center aligned"><h3>Proceed for sightseeing and Industrial Visit after Breakfast</h3></td>
-                        </tr>
-                        <!--tr-- class="active">
-                            <td class="center aligned">Sightseeing includes Meharangarh fort and Ummed Bhavan</td>
-                        </tr-->
-                        <tr>
-                            <td class="center aligned"><h3>New Year's Eve DJ Night</h3></td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">Dinner and Overnight in Hotel</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+		  <!--start of day 6-->
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="daySix">
+			      <h4 class="panel-title">
+			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#daySixDes" aria-expanded="false" aria-controls="daySixDes">
+			          Day 6: 01 January, Sunday 
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="daySixDes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="daySix">
+			      <div class="panel-body">
+			        <table class="table table-bordered">
+			        	<tbody>
+			        		<tr>
+			        			<td>Check out and proceed to Jaisalmer after Breakfast</td>
+			        		</tr>
 
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 6: 01 January, Sunday</div>
-                    <table class="ui unstackable table">
-                        <tbody>
-                        <tr>
-                            <td class="center aligned"><h3>Check out and proceed to Jaisalmer after Breakfast</h3></td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Visit to Windmill Industry enroute to Jaisalmer</h3></td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Check in at Camps in Sand dunes</h3></td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Camel Ride in Evening</h3></td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">Witness the beautiful sunset in the Desert along with tradition folk dance performance</td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Thar Desert Safari after Dinner</h3>(on your own)</td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">Dinner and Overnight in Swiss Tent Camps</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+			        		<tr>
+			        			<td>Visit to Windmill Industry enroute to Jaisalmer</td>
+			        		</tr>
 
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 7: 02 January, Monday</div>
-                    <table class="ui unstackable table">
-                        <tbody>
-                        <tr>
-                            <td class="center aligned"><h3>Proceed to Jaisalmer City after Breakfast</h3></td>
-                        </tr>
-                        <tr>
-                            <td class="center aligned"><h3>Proceed for sightseeing in Jaisalmer City</h3></td>
-                        </tr>
-                        <!--tr-- class="active">
-                            <td class="center aligned">Sightseeing includes Jaisalmer fort or Patwon ki Haveli</td>
-                        </tr-->
-                        <!--tr>
-                            <td class="center aligned"><h3>Visit to Gadsisar lake or shopping</h3></td>
-                        </tr-->
-                        <tr class="active">
-                            <td class="center aligned">Dinner and Overnight in Hotel</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+			        		<tr>
+			        			<td>Check in at Camps in Sand dunes</td>
+			        		</tr>
 
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 8: 03 January, Tuesday</div>
-                    <table class="ui unstackable table">
-                        <tbody>
-                        <tr>
-                            <td class="center aligned"><h3>Check out and proceed to catch Train from Jodhpur after Breakfast</h3></td>
-                        </tr>
-                        <tr class="active">
-                            <td class="center aligned">Packed Lunch and Dinner in Train</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+			        		<tr>
+			        			<td>Camel Ride in Evening</td>
+			        		</tr>
 
-                <div class="ui segment">
-                    <div class="ui black top attached label">Day 9: 04 January, Wednesday</div>
-                    <table class="ui unstackable table">
-                        <tbody>
-                        <tr>
-                            <td class="center aligned"><h3>Reach Mumbai</h3></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+			        		<tr>
+			        			<td class="well">Witness the beautiful sunset in the Desert along with tradition folk dance performance</td>
+			        		</tr>
 
-            </div>
-        </div>
+			        		<tr>
+			        			<td>Thar Desert Safari after Dinner<br>(on your own)</td>
+			        		</tr>
 
-        <br><br>
+			        		<tr>
+			        			<td class="well">Dinner and Overnight in Swiss Tent Camps</td>
+			        		</tr>
 
-        <div class="ui horizontal divider">
-            <h1 class="ui inverted header">Hotels</h1>
-        </div>
-        <br>
-        <div class="ui container">
-            <div class="ui four centered stackable cards">
-                <div class="card">
-                    <div>
-                        <img src="images/iv/hotel1.jpg" class="ui large centered image">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            Vesta Maurya Palace
-                        </div>
-                        <div class="meta">3-star hotel</div>
-                        <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
-                        <div class="description">
-                            Jaipur
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <img src="images/iv/hotel2.jpg" class="ui large centered image">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            Hotel Madhuram Royale
-                        </div>
-                        <div class="meta">3-star hotel</div>
-                        <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
-                        <div class="description">
-                            Jodhpur
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <img src="images/iv/hotel3.jpg" class="ui large centered image">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            Desert Camps
-                        </div>
-                        <div class="meta"></div>
-                        <div class="description">
-                            Jaisalmer
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <img src="images/iv/hotel4.jpg" class="ui large centered image">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            Hotel Jaisalgarh Palace
-                        </div>
-                        <div class="meta">3-star hotel</div>
-                        <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
-                        <div class="description">
-                            Jaisalmer City
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+			        	</tbody>
+			        </table>
+			      </div>
+			    </div>
+			  </div>
+		   <!--end of day 6-->
 
-    </div>
-    <div class="ui inverted vertical footer segment">
-        <div class="ui inverted section divider"></div>
-        <div class="ui center aligned container">
-            <img src="images/favicon/favicon-32x32.png" class="ui centered mini image">
-            <div class="ui horizontal inverted small divided link list">
-                <a class="item" href="index.html">Home</a>
-                <a class="item" href="#">Site Map</a>
-                <a class="item" href="about.html">Contact Us</a>
-                <a class="item" href="#">Terms and Conditions</a>
-            </div>
-            <div class="ui container">
-                <p>Copyright © 2016 Students' Council</p>
-                <p>Site design by Varun Bhatt & Flavion D'sa</p>
-            </div>
-        </div>
-    </div>
+		   <!--start of the day 7-->
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="daySeven">
+			      <h4 class="panel-title">
+			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#daySevenDes" aria-expanded="false" aria-controls="daySevenDes">
+			          Day 7: 02 January, Monday
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="daySevenDes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="daySeven">
+			      <div class="panel-body">
+			        <table class="table table-bordered">
+			        	<tbody>
+			        		<tr>
+			        			<td>Proceed to Jaisalmer City after Breakfast</td>
+			        		</tr>
 
-</div>
+			        		<tr>
+			        			<td>Proceed for sightseeing in Jaisalmer City</td>
+			        		</tr>
+
+
+			        		<tr>
+			        			<td class="well">Dinner and Overnight in Hotel</td>
+			        		</tr>
+
+			        	</tbody>
+			        </table>
+			      </div>
+			    </div>
+			  </div>
+			<!--end of the day 7-->
+
+			<!--start of day 8-->
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="dayEight">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dayEightDes" aria-expanded="false" aria-controls="dayEightDes">
+				          Day 8: 03 January, Tuesday
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="dayEightDes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dayEight">
+				      <div class="panel-body">
+				        <table class="table table-border">
+				        	<tbody>
+				        		
+				        		<tr>
+				        			<td>Check out and proceed to catch Train from Jodhpur after Breakfast</td>
+				        		</tr>
+
+				        		<tr>
+				        			<td class="well">Packed Lunch and Dinner in Train</td>	
+				        		</tr>
+
+				        	</tbody>
+				        </table>
+				      </div>
+				    </div>
+		  		</div>
+			<!--end of the day 8-->
+
+			<!--start of day 9-->
+				<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="dayNine">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dayNineDes" aria-expanded="false" aria-controls="dayNineDes">
+				          Day 9: 04 January, Wednesday
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="dayNineDes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dayNine">
+				      <div class="panel-body">
+				        <table class="table table-bordered">
+				        	<tbody>
+				        		<tr>
+				        			<td>Back To Mumbai</td>
+				        		</tr>
+				        	</tbody>
+				        </table>
+				      </div>
+				    </div>
+		  		</div>
+			<!--end of the day 9-->
+
+		</div>
+		<!--end of the Itinerary-->
+
+		<!--start of hotels-->
+			<span><center class="wow zoomIn">Hotel</center></span><hr width="75%">
+			<div>
+				<!--Start of hotel1-->	
+					<div class="col-lg-3 col-md-3 col-sm-6 wow fadeInUp" style="margin-top:10px;">
+			    		<div class="panel panel-default panel-profile">
+							<div class="panel-heading" style="background-image:url('img/hotel/1.jpg');height:150px;background-size:cover">
+						
+							</div>
+
+							<div class="panel-body">
+								<center>
+									<p style="font-size:x-large;margin-top:0px;" class="wow slideInUp" data-wow-duration="2s">Vesta Maurya Palace <p>
+									<h5 class="wow slideInUp" data-wow-duration="2s">3-star hotel</h5>
+									<h4 class="wow slideInUp" data-wow-duration="2s">Jaipur</h4>
+								</center>	
+							</div>
+						</div>
+					</div>
+				<!--end of hotel1-->
+
+				<!--start of hotel 2-->
+					<div class="col-lg-3 col-md-3 col-sm-6 wow fadeInUp" style="margin-top:10px;">
+			    		<div class="panel panel-default panel-profile">
+							<div class="panel-heading" style="background-image:url('img/hotel/2.jpg');height:150px;background-size:cover">
+						
+							</div>
+
+							<div class="panel-body">
+								<center>
+									<p style="font-size:x-large;margin-top:0px;" class="wow slideInUp" data-wow-duration="2s">Hotel Madhuram Royale <p>
+									<h5 class="wow slideInUp" data-wow-duration="2s">3-star hotel</h5>
+									<h4 class="wow slideInUp" data-wow-duration="2s">Jodpur</h4>
+								</center>	
+							</div>
+						</div>
+					</div> 
+				<!--end of hotel 2-->
+
+				<!--start of hotel 3 -->
+					<div class="col-lg-3 col-md-3 col-sm-6 wow fadeInUp" style="margin-top:10px;">
+			    		<div class="panel panel-default panel-profile">
+							<div class="panel-heading" style="background-image:url('img/hotel/3.jpg');height:150px;background-size:cover">
+						
+							</div>
+
+							<div class="panel-body">
+								<center>
+									<p style="font-size:x-large;margin-top:0px;" class="wow slideInUp" data-wow-duration="2s">Desert Camps<p>
+									<h4 class="wow slideInUp" data-wow-duration="2s">Jaisalmer</h4>
+								</center>	
+							</div>
+						</div>
+					</div>
+				<!--end of hotel 3-->
+				
+				<!--start of hotel 4-->
+					<div class="col-lg-3 col-md-3 col-sm-6 wow fadeInUp" style="margin-top:10px;">
+			    		<div class="panel panel-default panel-profile">
+							<div class="panel-heading" style="background-image:url('img/hotel/4.jpg');height:150px;background-size:cover">
+						
+							</div>
+
+							<div class="panel-body">
+								<center>
+									<p style="font-size:x-large;margin-top:0px;" class="wow slideInUp" data-wow-duration="2s">Hotel Jaisalgarh Palace<p>
+									<h5 class="wow slideInUp" data-wow-duration="2s">3-star hotel</h5>
+									<h4 class="wow slideInUp" data-wow-duration="2s">Jaisalmer City</h4>
+								</center>	
+							</div>
+						</div>
+					</div>
+				<!--end of hotel 4-->
+
+			</div>
+		<!--end of hotels-->
+		<br>
+		<br>
+		
+	</section>
+	<!--end of the pagr content -->
+
+	<!--start of page footer-->
+	<section id="page-footer">
+		
+	</section>
+	<!--end of page footer-->
+
+	<script type="text/javascript" src="js/jquery.mini.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 
+
+	<script type="text/javascript">
+		$("#page-header").load("header.html");
+		
+		$("#page-footer").load("footer.html");
+		
+
+		$("#page-footer").load("footer.html");
+
+		$('#dayOneDes').on('show.bs.collapse', function () {
+  			
+			$("#dayOneDes").addClass("zoomIn animated");
+		});
+
+		$('#dayTwodes').on('show.bs.collapse', function () {
+  			
+			$("#dayTwodes").addClass("zoomIn animated");
+		});
+		
+		$('#dayThreeDes').on('show.bs.collapse', function () {
+  			
+			$("#dayThreeDes").addClass("zoomIn animated");
+		});
+
+		$('#dayFourDes').on('show.bs.collapse', function () {
+  			
+			$("#dayFourDes").addClass("zoomIn animated");
+		});
+
+		$('#dayFiveDes').on('show.bs.collapse', function () {
+  			
+			$("#dayFiveDes").addClass("zoomIn animated");
+		});
+
+		$('#daySixDes').on('show.bs.collapse', function () {
+  			
+			$("#daySixDes").addClass("zoomIn animated");
+		});
+
+		$('#daySevenDes').on('show.bs.collapse', function () {
+  			
+			$("#daySevenDes").addClass("zoomIn animated");
+		});
+
+		$('#dayEightDes').on('show.bs.collapse', function () {
+  			
+			$("#dayEightDes").addClass("zoomIn animated");
+		});
+
+		$('#dayNineDes').on('show.bs.collapse', function () {
+  			
+			$("#dayNineDes").addClass("zoomIn animated");
+		});
+
+	</script>
 </html>

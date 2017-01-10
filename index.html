@@ -1,364 +1,271 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Standard Meta -->
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/images/favicon/manifest.json">
-    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#263238">
-    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
-    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#263238">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.mini.css">
+	<script type="text/javascript" src="js/wow.mini.js"></script>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+	<title>CRCE STUDENT COUNCIL</title>
+	<script type="text/javascript" src="js/jquery.mini.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/font-awesome.js"></script>
 
-    <!-- Site Properties -->
-    <title>CRCE Students' Council</title>
-
-    <link rel="stylesheet" type="text/css" href="./bower_components/semantic/dist/semantic.min.css">
-
-
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <!--<script src="./bower_components/semantic/dist/semantic.min.js"></script>-->
-    <script src="bower_components/semantic/dist/components/sidebar.min.js"></script>
-    <script src="bower_components/semantic/dist/components/dropdown.min.js"></script>
-    <script src="bower_components/semantic/dist/components/transition.min.js"></script>
-
-    <style type="text/css">
-        .hidden.menu {
-            display: none;
-        }
-
-        .masthead.segment {
-            min-height: 700px;
-            padding: 1em 0em;
-        }
-
-        .masthead .logo.item img {
-            margin-right: 1em;
-        }
-
-        .masthead .ui.menu .ui.button {
-            margin-left: 0.5em;
-        }
-
-        .masthead h1.ui.header {
-            margin-top: 2em;
-            margin-bottom: 0em;
-            font-size: 4em;
-            font-weight: normal;
-        }
-
-        .masthead h2 {
-            font-size: 1.7em;
-            font-weight: normal;
-        }
-
-        .ui.vertical.stripe {
-            padding: 8em 0em;
-        }
-
-        .ui.vertical.stripe h3 {
-            font-size: 2em;
-        }
-
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
-            margin-top: 3em;
-        }
-
-        .ui.vertical.stripe .floated.image {
-            clear: both;
-        }
-
-        .ui.vertical.stripe p {
-            font-size: 1.33em;
-        }
-
-        .ui.vertical.stripe .horizontal.divider {
-            margin: 3em 0em;
-        }
-
-        .quote.stripe.segment {
-            padding: 0em;
-        }
-
-        .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
-
-
-        .secondary.pointing.menu .toc.item {
-            display: none;
-        }
-
-        .ui.menu .item img.logo {
-            margin-right: 1.5em;
-        }
-
-        .main.container {
-            margin-top: 7em;
-        }
-
-        .wireframe {
-            margin-top: 2em;
-        }
-
-        .ui.footer.segment {
-            margin: 3em 0em 0em;
-            padding: 5em 0em;
-        }
-
-        #mobile-nav {
-            display: none;
-        }
-
-        #main {
-            padding-top: 60px;
-        }
-
-        @media only screen and (max-width: 700px) {
-            #large-nav {
-                display: none;
-            }
-
-            #mobile-nav {
-                display: block;
-            }
-
-            .secondary.pointing.menu .item,
-            .secondary.pointing.menu .menu {
-                display: none;
-            }
-
-            .secondary.pointing.menu .toc.item {
-                display: block;
-            }
-
-            .masthead.segment {
-                min-height: 350px;
-            }
-
-            .masthead h1.ui.header {
-                font-size: 3em;
-                margin-top: 2em;
-            }
-
-            .masthead h2 {
-                margin-top: 0.5em;
-                font-size: 1.5em;
-            }
-
-            .ui.sidebar {
-                overflow: visible !important;
-            }
-
-            #main {
-                padding-top: 0;
-            }
-        }
-
-        body {
-            background-color: #1B1C1D;
-            color: rgba(0, 0, 0, .87);
-        }
-
-        .ui.icon.button {
-            margin-left: 0.5em;
-            margin-right: 0.5em;
-        }
-
-        .ui.circular.segment {
-            width:  150px;
-            height: 150px;
-            padding: 20px;
-        }
-
-    </style>
-    <script>
-        $(document)
-                .ready(function () {
-                    // create sidebar and attach to menu open
-                    $('.ui.sidebar')
-                            .sidebar('setting', 'transition', 'overlay')
-                            .sidebar('attach events', '.toc.item')
-                    ;
-                    $('.ui.dropdown')
-                            .dropdown()
-                    ;
-
-                })
-        ;
-    </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-80789003-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
 
 </head>
-<body>
+<body style="background-image: url(img/background.jpg);">
 
-<div class="ui inverted sidebar top menu">
-    <a href="#" class="item">Home</a>
-    <div class="ui simple dropdown item">
-        Activities
-        <i class="dropdown icon"></i>
-        <div class=" menu">
-            <a class="item" href="crescendo/Home_Page/index.html" target="_blank">Crescendo</a>
-            <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate" target="_blank">Fr. Conceicao Rodrigues Memorial Debate</a>
-            <a class="item" href="http://euphoria.gq" target="_blank">Euphoria</a>
-            <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
-        </div>
-    </div>
-    <a href="about.html" class="item">About Us</a>
+	<!--start of the header-->
+	<section id="page-header" style="font-size:16px;">
+		
+	</section>
+	<!--End of the header-->
+
+	<!--start of the page content-->
+	<section class="container wow">
+
+		<!--start of the student council header-->
+		<div style="margin-top:45px;">
+			
+			<div class="row">
+				<img src="img/crce.png" alt="Frcrce logo" class="wow slideInRight crceimg" width="150px" height="auto">
+				<img src="img/logo.png" alt="student council logo" class="wow slideInLeft stucologo" width="150px" height="auto">
+			</div>
+
+			<div class="stucotitle">
+				<center>
+					<h1 class="wow bounceInDown" data-wow-duration="1s" >Student's Council</h1>
+					<h2 class="wow bounceInDown" data-wow-duration="2s">Fr. Conceicao Rodrigues College of Engineering</h2>
+				</center>
+				
+			</div>
+
+		</div>	
+		<!--end of the student council header-->
+		
+		<!--start of the about student council crce-->
+		<div>
+			<center> <h1 class="heading wow lightSpeedIn">About FRCRCE Student Council</h1> </center> <hr width="75%">
+
+			<p class="shortinfo wow slideInLeft">
+			We represents the entire student population of the campus, embraces the vision, mission and strategic plan of the FRCRCE. We upholds the values of the FRCRCE students, namely integrity, commitment, accountability and respect. We serves the student's interests that are in line with the vision and mission of the college and that will not offend anyone who is a campus student and a member of management. We also acts as mediator between management and students and protect the image of the College.
+			</p>
+
+			<!--start of mission and vision-->
+			<div class="row">
+				<!--start of the mission content-->
+					<div id="mission" class="col-lg-6 col-md-6 col-sm-6">
+						<h2 class="wow fadeInUp"> <center>Mission</center> </h2>
+					
+						<ul class="shortinfo wow fadeInUp" data-wow-delay="0.5s">
+						<li>To enhance the advancement of student life, quality education and student participation.</li>
+						</ul>
+					
+					</div>					
+				<!--end of the mission Content-->	
+				
+				<!--start of the vission content-->
+					<div id="vission" class="col-lg-6 col-md-6 col-sm-6" >
+
+						<h2 class="wow fadeInUp"> <center> Vision</center> </h2>
+
+						<ul class="shortinfo">
+							<li class="wow fadeInUp" data-wow-delay="0.5s">
+								To contribute to maintaining and enhancing student life in all the relevant aspects such as academic and social areas.
+							</li>
+
+							<li class="wow fadeInUp" data-wow-delay="0.65s">
+								To contribute to maintaining and enhancing student life in all the relevant aspects such as academic and social areas.
+							</li>
+
+							<li class="wow fadeInUp" data-wow-delay="0.80s">
+								To mediate the gap between the students and management.
+							</li>
+
+							<li class="wow fadeInUp" data-wow-delay="0.95s">
+								To improve transparency through consistent communication with the students.
+							</li>
+
+							<li class="wow fadeInUp" data-wow-delay="1.1s">
+								To encourage and support active participation of all students in community engagement projects.	
+							</li>
+						</ul>
+
+					</div>					
+				<!--end of the vission Content-->
+				
+			</div>
+			<!--end of mission and vision-->
+
+		</div>
+		<!--end of the about student council crce-->
+
+	</section>
+	<br>
+	<section>
+	<!--startof the parallax-->
+		<div class="parallax" style="background-image:url('img/college.jpg'); margin-left:0px;margin-right:0px;">
+    		
+    	</div>
+   		 <!--End of the parallaxframe-->
+	</section>
+
+	<!--start of the events-->
+	<section class="container wow">
+
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<center><h1 class="heading">Our Events</h1></center> <hr width="75%">
+
+			<!--start of technical event-->
+			<div>
+				<h2><center>Technical Events</center></h2>
+				<br>
+
+				<!--start of crescendo -->
+				<div class="col-lg-6 col-md-6 col-sm-6 wow tada">
+					
+					<div class="wrapper">
+						
+						<img class="img-rounded" src="img/crescendo.png" alt="crescendo image">
+
+						<div class="content">
+							
+							<div class="text_area">
+								<center>
+									<h2>
+										Crescendo 2k16<br>
+										<a class="btn btn-success" href="http://crcestudentcouncil.in/crescendo/Home_Page/index.html">Know more</a>
+									</h2>
+								</center>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end of crescendo-->
+
+				<!--start of IV-->
+				<div class="col-lg-6 col-md-6 col-sm-6 wow tada" >
+					
+					<div class="wrapper">
+						
+						<img class="img-rounded" src="img/iv.png" alt="crescendo image">
+
+						<div class="content">
+							
+							<div class="text_area">
+								<center>
+									<h2>
+										Industrial Visit<br>
+										<a class="btn btn-success" href="Iv.html">Know more</a>
+									</h2>
+								</center>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end of IV-->
+
+			</div>
+			<!--end of technical event-->
+
+			<!--start of cultural event-->
+			<div >
+				<h2><center style="margin-top:10px;">Cultural Events</center></h2>
+				<br>
+
+				<!--start of friendship day -->
+				<div class="col-lg-6 col-md-6 col-sm-6 wow fadeInLeft" >
+					
+					<div class="wrapper">
+						
+						<img class="img-rounded" src="img/frday.png" alt="frendship day">
+
+						<div class="content">
+							
+							<div class="text_area">
+								<center>
+									<h2>
+										<span style="color:black;">Friendship day</span><br>
+										<a class="btn btn-success" href="#">Know more</a>
+									</h2>
+								</center>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end of friendship day-->
+
+				<!--start of Human crce -->
+				<div class="col-lg-6 col-md-6 col-sm-6 wow fadeInRight">
+					
+					<div class="wrapper">
+						
+						<img class="img-rounded" src="img/hoc.png" alt="Human of Crce">
+
+						<div class="content">
+							
+							<div class="text_area">
+								<center>
+									<h2>
+										Human of CRCE<br>
+										<a class="btn btn-success" href="https://www.facebook.com/humansofcrce/" target="_blank">Know more</a>
+									</h2>
+								</center>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end of Human of crce-->
+			</div>
+
+			</div>
+			<!--end of cultural event-->
+
+
+		</div>
+	
+	</section>
+	<!--end of the event-->
+	<!--end of page content-->
+
+	<!--start of the footer-->
+	<div id="page-footer">
+		
+	</div>
+	<!--end of the footer-->
+
+
 </div>
-
-<div class="ui fixed inverted menu" id="large-nav">
-    <div class="ui container">
-        <a href="#" class="header item">
-            <img class="logo" src="images/favicon/favicon-32x32.png">
-            CRCE Students' Council</a>
-        <a href="#" class="item">Home</a>
-        <div class="ui dropdown item">
-            Activities
-            <i class="dropdown icon"></i>
-            <div class=" menu">
-                <a class="item" href="http://crescendo.fragnel.edu.in" target="_blank">Crescendo</a>
-                <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate" target="_blank">Fr. Conceicao Rodrigues Memorial Debate</a>
-                <a class="item" href="http://euphoria.gq" target="_blank">Euphoria</a>
-                <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
-            </div>
-        </div>
-        <a href="about.html" class="item">About Us</a>
-    </div>
-</div>
-
-<div class="pusher" id="parent" style="background-color: #1B1C1D">
-    <div class="ui inverted vertical masthead center aligned segment">
-        <div class="ui container">
-            <div class="ui large secondary inverted pointing menu">
-                <a class="header toc item">
-                    <i class="sidebar icon"></i>
-                    <img class="logo" src="images/favicon/android-chrome-192x192.png">
-                    CRCE Students' Council
-                </a>
-            </div>
-        </div>
-
-        <div class="ui inverted segment">
-
-            <div class="ui two column centered grid container">
-                <div class="column">
-                    <div class="ui inverted segment">
-                            <img src="images/logos/crce.png" class="ui small left floated image">
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui inverted segment">
-                        <img src="images/logos/stuco.png" class="ui small right floated image">
-                    </div>
-                </div>
-            </div>
-
-            <h1 class="ui inverted header">Students' Council</h1>
-            <h2>Fr. Conceicao Rodrigues College of Engineering</h2>
-            <div class="ui inverted segment">
-                <button class="ui circular facebook huge icon button" onclick="parent.open('https://www.facebook.com/frcrce.studentscouncil')">
-                    <i class="facebook f icon"></i>
-                </button>
-                <button class="ui circular instagram huge icon button" onclick="parent.open('https://instagram.com/_u/frcrce_bandra/')">
-                    <i class="instagram icon"></i>
-                </button>
-                <button class="ui circular youtube huge icon button" onclick="parent.open('https://www.youtube.com/channel/UCYDYa6njIVhimmdVe_UewhQ')">
-                    <i class="youtube play icon"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="ui inverted center aligned segment" id="main">
-        <div class="ui two column stackable center aligned grid">
-            <div class="ui horizontal divider">
-                <div class="ui inverted segment">
-                    <h3>Technical Events</h3>
-                </div>
-            </div>
-            <div class="column">
-                <a href="crescendo/Home_Page/index.html" target="_blank" class="ui huge rounded image">
-                    <img src="images/cover-images/crescendo.png">
-                </a>
-            </div>
-            <div class="column">
-                <a href="iv.html" class="ui huge rounded image">
-                    <img src="images/cover-images/iv.png">
-                </a>
-            </div>
-            <div class="ui horizontal divider">
-                <div class="ui inverted segment">
-                    <h3>Cultural Events</h3>
-                </div>
-            </div>
-            <div class="column">
-                <a href="friendshipday.html" class="ui huge rounded image">
-                    <img src="images/cover-images/frday.jpg">
-                </a>
-            </div>
-            <div class="ui horizontal divider">
-                <div class="ui inverted segment">
-                    <h3>Sports Events</h3>
-                </div>
-            </div>
-            <div class="column">
-                <a href="football.html" class="ui huge rounded image">
-                    <img src="images/cover-images/football.png">
-                </a>
-            </div>
-            <div class="ui horizontal divider">
-                <div class="ui inverted segment">
-                    <h3>Facebook Pages</h3>
-                </div>
-            </div>
-            <div class="column">
-                <a href="https://www.facebook.com/humansofcrce/" target="_blank" class="ui huge rounded image">
-                    <img src="images/cover-images/hoc.png">
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="ui inverted vertical footer segment">
-        <div class="ui inverted section divider"></div>
-        <div class="ui center aligned container">
-            <img src="images/favicon/favicon-32x32.png" class="ui centered mini image">
-            <div class="ui horizontal inverted small divided link list">
-                <a class="active item" href="#">Home</a>
-                <a class="item" href="#">Site Map</a>
-                <a class="item" href="about.html">Contact Us</a>
-                <a class="item" href="#">Terms and Conditions</a>
-            </div>
-            <div class="ui container">
-                <p>Copyright © 2016 Students' Council</p>
-                <p>Site design by Varun Bhatt & Flavion D'sa</p>
-            </div>
-        </div>
-    </div>
-</div>
+ 
 </body>
+
+<script type="text/javascript">
+	$("#page-header").load("header.html");
+	$("#page-footer").load("footer.html");
+</script>
+
 
 </html>
