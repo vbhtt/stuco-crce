@@ -1,0 +1,55 @@
+	*{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.left .teaminfo p{
+	
+	text-align: right;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.right .teaminfo p{
+	
+	text-align: left;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.team-center{
+	text-align: center;
+}
+
+.title{
+	font-size: 18px;
+	
+}
+
+.score{
+	font-size: 24px;
+	margin-top: -12px;
+}
+
+.team-center{
+	margin-top:15px;
+	font-size: 25px;
+}
+
+.heading{
+	font-size: 17px;
+}
+
+.teaminfo{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.datehead{
+	font-size: 30px;
+}
+
+.panel-heading .heading{
+	color:green;
+}
+
+#page-content{
+	margin-top:64px;
+}
