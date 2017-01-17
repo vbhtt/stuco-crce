@@ -1,0 +1,19 @@
+#event-head{
+	font-size:58px;
+	
+}
+
+#event-rule,#event-date,#event-time-report,#event-time,#event-prize,#event-contact,#event-venue{
+	font-size: 20px;
+}
+
+#registration-fee{
+	font-size:20px;
+}
+
+.heading {
+	margin-top:260px;
+	margin-bottom:260px;
+	font-size: 50px;
+
+}
