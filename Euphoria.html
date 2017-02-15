@@ -10,6 +10,37 @@
     <script type="text/javascript" src="js/wow.mini.js"></script>
 	<script type="text/javascript">
 		new WOW().init();
+		var target_date = (1000*3600*48); // set the countdown date
+var days, hours, minutes, seconds; // variables for time units
+
+var countdown = document.getElementById("tiles"); // get tag element
+
+getCountdown();
+
+setInterval(function () { getCountdown(); }, 1000);
+
+function getCountdown(){
+
+	// find the amount of "seconds" between now and target
+	var current_date = new Date().getTime();
+	var seconds_left = (target_date - current_date) / 1000;
+
+	days = pad( parseInt(seconds_left / 86400) );
+	seconds_left = seconds_left % 86400;
+		 
+	hours = pad( parseInt(seconds_left / 3600) );
+	seconds_left = seconds_left % 3600;
+		  
+	minutes = pad( parseInt(seconds_left / 60) );
+	seconds = pad( parseInt( seconds_left % 60 ) );
+
+	// format countdown string + set tag value
+	countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
+}
+
+function pad(n) {
+	return (n < 10 ? '0' : '') + n;
+}
 	</script>
 	<link rel="stylesheet" type="text/css" href="css/euphoria.css">
 	<link rel="stylesheet" type="text/css" href="css/homepage.css">
@@ -18,7 +49,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Euphoria+Script" rel="stylesheet">
 	
 </head>
-<body style="background-image: url(img/background.jpg);">
+<body style="background-image: url(img/euphoria/Eu.jpg); background-repeat: no-repeat; background-size: contain; ">
 
 <header id="page-header">
 	
@@ -26,12 +57,13 @@
 
 <!--start of page content-->
 	<section>
+
 		<div class="container">
+			
+			<span><center><div class="heading wow fadeInUp" style="font-size: 110px;">Euphoria '17</div></center></span>	
 
-			<span><center class="heading wow fadeInUp" style="font-size: 110px;">Euphoria '17</center> </span>	
-
-			<!-- start of event1 -->
-				<img class="img-responsive center-block" src="img/euphoria/Eu.jpg">
+			<!-- start of event1 
+				<img class="img-responsive center-block" src="img/euphoria/Eu.jpg">-->
 						<!-- <img src="" alt="ground football" width="100%"  > -->
 					
 
@@ -52,7 +84,7 @@
 								<b>Performing Arts</b>			
 							</h3>
 							<h4>
-								<b>1. Do Re Mi:</b> For all the budding Adeles and Enriques out there! Perform your favourite English songs and liven the hills with the sound of your music!!<br><br> <b>2. Sa Re Ga Ma:</b> This event is our attempt to discover the next Lata Mangeshkar or Kishore Kumar amongst us.<br><br><b>3. So You Think You Can Dance (Solo + Duet): </b>(so you think you can dance?) If you do, this is the perfect opportunity for you to show us what you’ve got!<br><br><b>4. Dance Face Off: </b> Showcase your dancing skills as you battle it out on the dance floor!<br><br><b>5. Karaoke: </b> Getaway from the monochromatic life by relaxing with your friends while you sing out your all-time favourite songs.<br><br><b> 6. CRCE’s Got Talent: </b> What’s your X-factor?
+								<b>1. Do Re Mi:</b> For all the budding Adeles and Enriques out there! Perform your favourite English songs and liven the hills with the sound of your music!!<br><br> <b>2. Sa Re Ga Ma:</b> This event is our attempt to discover the next Lata Mangeshkar or Kishore Kumar amongst us.<br><br><b>3. So You Think You Can Dance (Solo + Duet): </b>(so you think you can dance?) If you do, this is the perfect opportunity for you to show us what you’ve got!<br><br><b>4. Dance Face Off: </b> Showcase your dancing skills as you battle it out on the dance floor!<br><br><b> 5. CRCE’s Got Talent: </b> What’s your X-factor?
 							</h4>
 					</div>
 
