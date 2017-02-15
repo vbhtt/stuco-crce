@@ -12,11 +12,12 @@
 }
 
 .heading {
-	margin-top:1200px;
+	margin-top:400px;
 	margin-bottom:100px;
 	
 	font-family: 'Euphoria Script', cursive;
 }
+
 #countdown{
 	width: 465px;
 	height: 112px;
