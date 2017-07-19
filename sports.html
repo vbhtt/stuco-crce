@@ -291,6 +291,8 @@
             transform: translate(0,-50%)
         }
     </style>
+
+
     <script>
         $(document)
                 .ready(function () {
@@ -362,7 +364,7 @@
             <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
         </div>
     </div>
-    <a href="team.html" class="item">Our Team</a>
+    <a href="about.html" class="item">About Us</a>
 </div>
 
 <div class="ui fixed inverted menu" id="large-nav">
@@ -381,37 +383,16 @@
                 <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
             </div>
         </div>
-        <a href="team.html" class="item">Our Team</a>
+        <a href="about.html" class="item">About Us</a>
     </div>
 </div>
 
 <div class="pusher" id="parent" style="background-color: #1B1C1D">
     <div class="ui grink-football modal">
-        <div class="segment">
-            <div id="minimal">
-                <div class="demo"></div>
-                <script type="text/javascript">
-                    var minimalData = {
-                        teams: [
-                            ["TE IT", "SE Electronics"],
-                            ["BE Production", "-"],
-                            ["TE Computers", "SE Production"],
-                            ["BE IT", "-"],
-                            ["TE Production", "SE Computers"],
-                            ["BE Electronics", "-"],
-                            ["TE Electronics", "SE IT"],
-                            ["BE Computers", "-"]
-                        ],
-                        results: []
-                    };
-
-                    $(function () {
-                        $('#minimal').find('.demo').bracket({
-                            init: minimalData /* data to initialize the bracket with */
-                        })
-                    })
-                </script>
-            </div>
+        <div class="ui segment" style="padding:10px">
+            <iframe src="./sports/grink.html"
+                    width="100%" height="520px" scrolling="no" frameborder="0">
+            </iframe>
         </div>
     </div>
     <div class="ui vertical masthead center aligned segment">

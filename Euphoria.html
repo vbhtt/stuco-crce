@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Euphoria</title>
+	 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery.mini.js"></script>
+    <script type="text/javascript" src="js/wow.mini.js"></script>
+	<script type="text/javascript">
+		new WOW().init();
+		var target_date = (1000*3600*48); // set the countdown date
+var days, hours, minutes, seconds; // variables for time units
+
+var countdown = document.getElementById("tiles"); // get tag element
+
+getCountdown();
+
+setInterval(function () { getCountdown(); }, 1000);
+
+function getCountdown(){
+
+	// find the amount of "seconds" between now and target
+	var current_date = new Date().getTime();
+	var seconds_left = (target_date - current_date) / 1000;
+
+	days = pad( parseInt(seconds_left / 86400) );
+	seconds_left = seconds_left % 86400;
+		 
+	hours = pad( parseInt(seconds_left / 3600) );
+	seconds_left = seconds_left % 3600;
+		  
+	minutes = pad( parseInt(seconds_left / 60) );
+	seconds = pad( parseInt( seconds_left % 60 ) );
+
+	// format countdown string + set tag value
+	countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
+}
+
+function pad(n) {
+	return (n < 10 ? '0' : '') + n;
+}
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/euphoria.css">
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.mini.css">
+	<link rel="stylesheet" type="text/css" href="css/flipclock.css">
+	<link rel="stylesheet" type="text/css" href="css/atlosh.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Euphoria+Script" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script type="text/javascript" src="js/flipclock.js"></script>
+</head>
+<body style="background-image: url(img/background1.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; ">
+
+<header id="page-header">
+	
+</header>
+
+<!--start of page content-->
+	<section>
+
+		<div class="container">
+			<span><center class="heading wow fadeInUp" style="font-size: 110px;">Euphoria '17</center></span>	
+			<!-- start of event1 -->
+				<h1>Schedule</h1><hr>
+				<div class="col-lg-4 col-md-8 col-sm-6 wow fadeInUp">
+
+					<h1 class="heading wow fadeInUp" style="font-size: 40px;">ESCAPING <br>THE <br>MONOCHROME</h1>
+				</div>
+				<!--end of event1-->
+			<!--start of event1-->
+				<div class="col-lg-8 col-md-8 col-sm-6 wow fadeInUp">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+					<img src="img/euphoria/Eu.jpg" class="img-responsive">
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event1 -->
+				</div>
+			<!-- start of event1-->
+						<!-- <img src="" alt="ground football" width="100%"  > -->
+						<!-- start of event1 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/Mismatch.jpg" class="img-responsive" width="100%"  >
+
+					<div class="panel-body">
+
+							<h3>
+								<b>MONDAY : 20<sup>TH</sup> February</b>			
+							</h3>
+							<table class="table text-center table-striped table-bordered wow fadeInUp" >
+				<thead>
+					<tr>
+						<td><b>EVENTS</b></td>
+						<td><b>TIME</b></td>
+						<td><b>VENUE</b></td>
+					</tr>
+				</thead>
+
+				<tbody>
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>INAUGURATION </td>
+						<td>9:45 AM – 11:00 AM</td>
+						<td>SAMVAAD</td>
+					</tr>
+					<!-- end of row 1 -->
+					
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>DO RE MI</td>
+						<td>11:30 AM – 1:30 PM</td>
+						<td>SAMVAAD</td>
+					</tr>
+					<!-- end of row 1 -->
+					
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>FOOSBALL </td>
+						<td>11:30 AM</td>
+						<td>606</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>JUST A MINUTE </td>
+						<td>11:30 AM – 1:30 PM</td>
+						<td>SEMINAR HALL</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>HANGMAN </td>
+						<td>11:30 AM</td>
+						<td>711</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>LAN GAMING</td>
+						<td>11:30 AM</td>
+						<td>6<SUP>TH</SUP> FLOOR (LABS)</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>MUnopoly</td>
+						<td>12:00 PM</td>
+						<td>607</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>SO YOU THINK YOU CAN DANCE</td>
+						<td>12:30 PM</td>
+						<td>ED HALL</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>TATTOO MAKING </td>
+						<td>12:30 PM – 3:00 PM</td>
+						<td>STEPS</td>
+					</tr>
+					<!-- end of row 1 -->
+					
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>SPELL BEE</td>
+						<td>1:00 PM</td>
+						<td>706</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>ARM WRESTLING</td>
+						<td>1:30 PM</td>
+						<td>OLD CANTEEN</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>SA RE GA MA</td>
+						<td>1:30 PM - 4:00 PM</td>
+						<td>SAMVAAD</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>EXTEMPORE</td>
+						<td>2:00 PM - 4:00 PM</td>
+						<td>511</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>AD MAD</td>
+						<td>2:00 PM - 4:30 PM</td>
+						<td>SEMINAR HALL</td>
+					</tr>
+					<!-- end of row 1 -->
+					</tbody>
+					</table>
+					</div>
+
+
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event1 -->
+				<!-- start of event1 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/Traditional.jpg" class="img-responsive" width="100%"  >
+
+					<div class="panel-body">
+
+							<h3>
+								<b>TUESDAY : 21<sup>ST</sup> February</b>			
+							</h3>
+								<table class="table text-center table-striped table-bordered wow fadeInUp" >
+				<thead>
+					<tr>
+						<td><b>EVENTS</b></td>
+						<td><b>TIME</b></td>
+						<td><b>VENUE</b></td>
+					</tr>
+				</thead>
+
+				<tbody>
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>RINK FOORBALL</td>
+						<td>10:00AM</td>
+						<td>BASKETBALL COURT</td>
+					</tr>
+					<!-- end of row 1 -->
+					
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>NAIL ART</td>
+						<td>10:00 AM</td>
+						<td>STEPS</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>ABA DHUBI</td>
+						<td>10:00 AM</td>
+						<td>ED HALL</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>COLOR SPLASH</td>
+						<td>10:00 AM - 12:00 PM</td>
+						<td>607</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>CRCE’S FITTEST</td>
+						<td>11:00 AM – 2:00 PM</td>
+						<td>STEPS</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>LAN GAMING</td>
+						<td>11:00 AM</td>
+						<td>6<SUP>TH</SUP> FLOOR (LABS)</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>TABOO</td>
+						<td>11:00 AM</td>
+						<td>606</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>FAKE A NEWS</td>
+						<td>11:00 AM - 1:30 PM</td>
+						<td>711</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>CHARADES </td>
+						<td>11:30 AM</td>
+						<td>607</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>POKER </td>
+						<td>12:00 PM</td>
+						<td>511</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>CREATIVE WRITING</td>
+						<td>2:00 PM - 5:00 PM</td>
+						<td>711</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>KARAOKE</td>
+						<td>3:00 PM - 5:00 PM</td>
+						<td>SAMVAAD</td>
+					</tr>
+					<!-- end of row 1 -->
+					</tbody>
+					</table>
+					<br>
+					<br>
+					<br>
+					<br>
+					</div>
+
+
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event1 -->
+				<!-- start of event1 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/default.jpg" class="img-responsive" width="100%"  >
+
+					<div class="panel-body">
+
+							<h3>
+								<b>WEDNESDAY : 22<sup>ND</sup> February</b>			
+							</h3>
+								<table class="table text-center table-striped table-bordered wow fadeInUp" >
+				<thead>
+					<tr>
+						<td><b>EVENTS</b></td>
+						<td><b>TIME</b></td>
+						<td><b>VENUE</b></td>
+					</tr>
+				</thead>
+
+				<tbody>
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>WE ARE THE WORLD</td>
+						<td>10:00AM</td>
+						<td>SAMVAAD</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>PARLIAMENTARY DEBATE</td>
+						<td>11:30 AM</td>
+						<td>606 AND 607</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>REAL CHESS</td>
+						<td>11:30 AM</td>
+						<td>OLD CANTEEN</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>STAFF CULTURAL PROGRAM</td>
+						<td>2:00 PM - 4:00 PM</td>
+						<td>SAMVAAD</td>
+					</tr>
+					<!-- end of row 1 -->
+					</tbody>
+					</table>
+					</div>
+
+
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event1 -->
+				<!-- start of event1 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/Jersey.jpg" class="img-responsive" width="100%"  >
+
+					<div class="panel-body">
+
+							<h3>
+								<b>THURSDAY : 23<sup>RD</sup> February</b>			
+							</h3>
+								<table class="table text-center table-striped table-bordered wow fadeInUp" >
+				<thead>
+					<tr>
+						<td><b>EVENTS</b></td>
+						<td><b>TIME</b></td>
+						<td><b>VENUE</b></td>
+					</tr>
+				</thead>
+
+				<tbody>
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>FACE PAINTING</td>
+						<td>10:00 AM - 1:00 PM</td>
+						<td>STEPS</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>GLOW IN THE DARK CRICKET</td>
+						<td>10:00 AM</td>
+						<td>ED HALL</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>QUIZ UP</td>
+						<td>10:00 AM</td>
+						<td>606</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>MR. AND MS. CRCE</td>
+						<td>10:30 AM</td>
+						<td>SAMVAAD</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>POETRY RE-ENGINEERED</td>
+						<td>10:00 AM – 1:00 PM</td>
+						<td>511</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>DANCE FACE OFF</td>
+						<td>11:00 AM</td>
+						<td>GYMKHANA (BCR)</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>SCRABBLE </td>
+						<td>11:00 AM</td>
+						<td>711</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>CRCE ROADIES</td>
+						<td>12:00 PM</td>
+						<td>607</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>TREASURE HUNT </td>
+						<td>12:00 PM</td>
+						<td>COLLLEGE PREMISES</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>DARTS </td>
+						<td>12:00 PM</td>
+						<td>706</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>CRCE'S GOT TALENT</td>
+						<td>12:30 PM</td>
+						<td>SEMINAR HALL</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>ANTAKSHARI </td>
+						<td>1:00 PM</td>
+						<td>511</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>RANGOLI</td>
+						<td>2:00 PM</td>
+						<td>OLD CANTEEN</td>
+					</tr>
+					<!-- end of row 1 -->
+					</tbody>
+					</table>
+					</div>
+
+
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event1 -->
+			<!--start of boys events-->
+			<h1>Events</h1><hr>
+			<div class="row wow">
+
+				<!-- start of event1 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/performingarts.gif" class="img-responsive" width="100%"  >
+
+					<div class="panel-body">
+
+							<h3>
+								<b>Performing Arts</b>			
+							</h3>
+							<h4>
+								<b>Event coordinator : <br> 1. Joann Tharian : +91 9820655531<br> 2. Rithika PB : +91 9920621745</b>			
+							</h4>
+							<h4>
+								<b>1. Do Re Mi:</b> For all the budding Adeles and Enriques out there! Perform your favourite English songs and liven the hills with the sound of your music!!<br><br>Time Duration : 3 Minutes <br>Event Head : Shaun Gilson (9987564295)<br><br> <b>2. Sa Re Ga Ma:</b> This event is our attempt to discover the next Lata Mangeshkar or Kishore Kumar amongst us.<br><br>Time Duration : 3 Minutes <br>Event Head : Upadnya Chandravarkar (8879476253)<br><br><b>3. So You Think You Can Dance (Solo + Duet): </b>(so you think you can dance?) If you do, this is the perfect opportunity for you to show us what you’ve got!<br><br>Team : 1-2 Participants<br> Time Duration : 3 Minutes <br>Event Head : Suba Mukundan (9699316586) And Sushmita Agnihotri (9769882401)<br><br><b>4. Dance Face Off: </b> Showcase your dancing skills as you battle it out on the dance floor!<br><br>Team : 1 Participant<br> Time Duration : 30 Seconds <br>Event Head : Suba Mukundan (9699316586) And Sushmita Agnihotri (9769882401)<br><br><b> 5. CRCE’s Got Talent: </b> What’s your X-factor?<br><br>Team : 1-4 Participants<br> Time Duration : 3 Minutes <br>Event Head : Akash Palghadmal (9545157385) And Nicole Fernandes (8879041385)
+							</h4>
+					</div>
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event1 -->
+				<!-- start of event6 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.70s">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/gaming.png" class="img-responsive" width="100%"  >
+					
+
+					<div class="panel-body">
+							
+							 ‬‬ 
+							<h3>
+								<b>Gaming Events</b>			
+							</h3>
+							<h4>
+								<b>Event coordinator : <br> 1. Joshua  Noronha : +91 98333 19513 <br> 2. Nishant Seth : +91 72088 12739</b>			
+							</h4>
+							<h4>
+								<b>1. Lan Gaming :</b>
+
+All those hours playing video games , did you ever think it would be put to
+
+use? Switch your gamer mode on and show us who’s the best.<br><br>Team : 2 Participants (FIFA), 5 Participants (CS), 1 Participant (Blur). <br>  Event Head : Ryan Futardo
+(9619293738)
+<br><br>
+
+<b>2. Glow in the dark Cricket : </b>
+
+What’s the same as box cricket, but better? Glow in the dark cricket!<br><br>Team : 5 + 2 Participants<br> Event Head : Sahil Mhatre
+(8452998470)
+<br><br>
+
+<b>3. Darts : </b>
+
+Think you’ve Got Good aim? Here’s your chance to test it at this fun game of darts!<br><br>Team : 3 Participants<br> Event Head : Salwa Khan
+(9869713047)
+<br><br>
+
+<b>4. Foosball: </b>Show us if you still got it in you if you’re tied up, as you look to score and save
+
+your goal in this human sized version of foosball.<br><br>Team : 5 + 2 Participants<br>  Event Head : Omkar Rane
+(9619139719)
+<br><br>
+
+<b>5. Aba Dhubi :</b>
+
+We’ve all played this game growing up, bring out the child in you as you play this game
+
+once more!<br><br>Team : 6 + 2 Participants<br> Event Head :Gunjan Munde
+(9423983038)<br><br>
+
+<b>6. Real Chess: </b> Would you have survived had you been in place of Harry and Ron
+
+playing wizard’s chess? Come find out in the muggle version of the game. <br><br>Team : 16 Participants <br> Event Head : Bhanu Nadar
+(7208755685)
+
+							</h4>
+					</div>
+
+
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of evnet6-->
+				<!-- start of event5 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.65s">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/finearts.jpg" class="img-responsive" width="100%"  > 
+
+					<div class="panel-body">
+
+							<h3>
+								<b>Fine Arts</b>			
+							</h3>
+							
+							<h4>
+								<b>Event coordinator : <br> 1. Shreya Wazir : 9819293960 <br> 2. Ruth Peter : 7506095103/9869088301</b>			
+							</h4>
+						<h4>
+							<b>1. Face Painting:</b> Put a fellow mate behind a mask while showcasing your painting skills.<br><br>Team : 2 Participants (Model + Artist)<br>Time Duration : 30 Minutes<br> Each class will be given basic colors. Participants must carry their own additional painting material. Participants cannot refer to anything during the task. <br>Event Head : Siddhi Mali
+(9819971199)<br><br>
+
+<b>2. Rangoli:</b> One of the most ancient traditions of our country…show us your version of it!<br><br>Team : 1-2 Participants (Model + Artist)<br>Time Duration : 60 Minutes<br> Each class will be given basic rangoli colors. Participants may carry their own additional colors. Participants cannot refer to anything during the task. <br>Event Head : Swapnaja(7506886626) And Yashasvini(8828256129)<br><br>
+
+<b>3. Nail Art: </b>All you fashionistas out there put your best nails forward.<br><br>Team : 2 Participants (Model + Artist)<br>Time Duration : 15 Minutes<br> NOTE: Participants must carry their own material. Usage of stickers is not allowed. Participants cannot refer to anything during the task. <br>Event Head : Alisha Gonsalves
+(7875287916)
+<br><br>
+
+<b>4. Color Splash : </b>Escape the monochrome, bring the black and white image provided, to
+
+life, with your vivid imagination and coloring details!<br><br>Team : 1 Participant <br>Time Duration : 60 Minutes<br> NOTE: Each class will be given basic colors. Participants must carry their own additional drawing and painting/coloring material. Participants cannot refer to anything during the task. <br>Event Head : Natasha Koli
+(9049186989)
+<br><br>
+
+<b>5. Tattoo Making: </b> Traditional, realism, tribal, Japanese…what’s your tattoo style?<br><br>Team : 2 Participants (Model + Artist)<br>Time Duration : 20 Minutes<br> NOTE: Participants must carry their own material. Participants must use black and white color in their tattoo.  <br> Event Head : Suzanne Tuscano (8408073694)
+						</h4>	
+					</div>
+
+
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event5 -->
+
+
+				<!-- start of event2 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/personality.jpg" class="img-responsive" width="100%"  >
+					
+					<div class="panel-body">
+					<br><br><br><br><br><br><br>
+							<h3>
+								<b>Personality Events<br><br></b>			
+							</h3>
+							<h4>
+								<b>Event coordinator : <br><br> 1. Sonu Yadav 7303118653 <br><br> 2. Trish Bandhekar 99307222397</b>	<br><br><br>		
+							</h4>
+							<h4>
+								<b>1. Mr. and Ms. CRCE: </b> This one is for all the BEs. No one ever said you have to be extra ordinary…but what’s the fun in being ordinary anyway? Do you think you are awesome enough to be crowned Mr./Ms. CRCE?   <br><br>Team : 1 Participant<br> Event Head : Upadnya Chavarkar
+(8976193195)<br><br><br>
+
+<b>2. CRCE’s Fittest: </b> Complete the given fitness tasks the quickest and be named CRCE’s Fittest.<br><br>Team : 1 Participant<br><br>NOTE : Task for boys : <br>20 push-ups, 10 pull-ups, 20 crunches. <br><br>Task for girls : <br>10 push-ups, 20 squats, 20 crunches.<br><br><br>Event Head : Sahil Mhatre
+(8452998470)
+<br><br><br>
+
+<b>3. Arm Wrestling: </b> Aa Dekhe Zara, Kisme Kitna Hai Dum!<br><br>Team : 1 Participant<br><br>Event Head : Harsh Bajaria(9769687587) And Siddhi Mali(9819971199)<br><br>
+<br> 
+<b>4. CRCE Roadies: </b> Your wit, endurance and morale will be put to test here in CRCE Roadies. Disclaimer: Not for the faint hearted.<br><br>Team : 1 Participant<br><br>Event Head : Stafford Crasto(8655879419)
+ <br><br><br><br>
+
+							</h4>
+					</div>
+
+
+
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event2-->
+
+				<!-- start of event3 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/literary.jpg" class="img-responsive" alt="ground football" width="100%" >
+
+					<div class="panel-body">
+
+							<h3>
+								<b>Literary Events</b>			
+							</h3>
+							<h4>
+								<b>Event coordinator : <br> 1. Vishwesh Hande : 9619066603 <br> 2. Christine Tharian : 9930413234 </b>			
+							</h4>
+							<h4>
+								<b>1. Extempore : </b>
+How fast can you organize your thoughts? Here’s your chance to showcase your impromptu speech talent.<br><br>Team : 1 Participant<br>Event Head : Ayushi Bhatnagar (9702995132)<br><br> 
+<b>2. Creative Writing : </b>
+Ever wondered what would have happened if Cindrella hadn’t gone to the ball? Or if Katniss had never volunteered? We give you a chance to rewrite famous stories according to your will!<br><br>Team : 1 Participant<br>Event Head : Rujuta Hajarnis (7567730301)<br><br>
+<b> 3. Spell Bee :</b>
+How well do you think you know the English language? Find out here as you are made to spell out a variety of words.<br><br>Team : 1 Participant<br>Event Head : Rujuta Hajarnis (7567730301)<br><br>
+
+<b> 4. Just a Minute :</b>
+How difficult is it to talk continuously for a minute without error? Here’s your chance to find out!<br><br>Team : 1 Participant<br>Event Head : Aaron Anthony (9987607773)<br><br>
+<b> 5. Fake a News :</b>
+Not your ordinary news article! We’ll give you a headline and you have to come up with the most bizzare news piece for it. Let your imagination run wild!<br><br>Team : 1 Participant<br>Event Head : Akhil Shetty (9920320499)<br><br>
+
+<b> 6. Scrabble :</b>
+Rest assured this game will keep your brain busy!<br><br>Team : 1 Participant<br>Event Head : Ayushi Bhatnagar (9702995132)<br><br>
+<b> 7. Parlimentary Debate :</b>
+Captivated by Arnab Goswami? We give you a platform to showcase your debating skills here at CRCE.<br><br>Team : 2 Participant. (One team per class)<br>Event Head : Aditya Kelkar (9987712055)<br><br>
+
+<b> 8. Poetry Re-engineered :</b>
+We bet you thought kindergarten was the last time you had to recite poetry! Enthrall the audience as you recite these poems in the most fascinating way possible.<br><br>Team : 1 Participant<br>Event Head : Shaun Gilson (9987564295)<br><br>
+
+							</h4>
+
+					</div>
+
+
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event3 -->
+
+				<!-- start of event4 -->
+				<div class="col-lg-6 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.45s">
+					<!-- start of the panel -->
+					<div class="panel panel-default">
+
+					<img src="img/euphoria/fungames.png" class="img-responsive" width="100%"  > 
+
+					<div class="panel-body">
+
+							<h3>
+								<b>Fun Events</b>			
+							</h3>
+							<h4>
+								<b>Event coordinator : <br> 1. Gopesh Rajderkar : 9702279504<br> 2. Jerry Ematthy : 8879476253</b>			
+							</h4>
+							<h4>
+								<b> 1. Taboo :</b>
+
+The most fun game ever played! Get your squad and play taboo where you have to
+
+make your team-mates guess maximum words without using the Taboo words. All of
+
+your squad’s inside jokes will come in handy and you’re gonna have a blast!<br><br>Team : 4 Participants<br>Event Head : Upadnya Chandravarkar (8976193195) And Anisha Gharat (9870011512)<br><br>
+
+<b>2. Ad Mad :</b>
+
+Show us your acting and convincing skills as you make an advertisement for this bizzare
+
+and unusual product given by us!<br><br>Team : 2-4 Participants<br>Event Head : Vishal Bandapalle (7977724647) And Melita Saldanha (7709181931)<br><br>
+
+<b>3. MUnopoly : </b>
+
+Engineering life is truly a roller coaster ride. We challenge you
+
+to this board game where in you are the tokens and Mumbai University is the board.
+
+Beware of KTs!<br><br>Team : 2 Participants<br>Event Head : Aditya Chanchad (9833537343) And Akhil Shetty (9920320499) <br><br>
+
+<b>4. Charades : </b>Enact these movies/ songs/ actions for your team-mates to guess!<br><br>Team : 4 Participantseta<br>Event Head : Omkar Rane (9619139719)<br><br>
+
+<b>5. Treasure Hunt: </b>Awaken your inner Indiana Jones and hunt for the treasure awaiting you.<br><br>Team : 4 Participant (One team per class)<br>Event Head : Anisha Gharat (9870011512)<br><br>
+
+<b>6. Poker :</b> A classic game of poker. We warn you, stakes are high in this game of gambling.<br><br>Team : 1 Participant<br>Event Head : Aaron Anthony (9987607773)<br><br>
+
+<b>7. Antakshari :</b>
+
+For all those Bollywood song lovers out there. This one’s for you!<br><br>Team : 3-5 Participants<br>Event Head : Anish John (9969103354)<br><br>
+
+<b>8. Quiz Up :</b>
+
+Test your knowledge in these fun genres as you play this game!<br><br>Team : 2 Participants<br>Event Head : Akhil Shetty (9920320499) And Aditya Chanchad (9833537343)<br><br>
+
+<b>9. Hangman : </b>Please don’t let the poor man hang, save him by guessing the correct movie
+
+or song.<br><br>Team : 3 Participants<br>Event Head : Jason D’souza (9819571332)<br><br>
+							</h4>
+					</div>
+
+
+					</div>
+					<!-- end of panel -->
+				</div>
+				<!-- end of event4 -->
+			<!-- START OF MODAL -->
+			<div class="modal fade" id="past" tabindex="-1" data-backdrop="static" role="dialog" style="display: none;">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-body wow">
+							<div id="eventContain">
+								<center>
+									<h1 id="event-head">
+										
+									</h1>
+								</center>
+
+								<div id="rules-info">
+									<center>
+									<h3 style="font-size: 40px;">Rules</h3><hr>
+									<ul id="event-rule"></ul>
+
+									</center>
+									<div class="alert alert-success">
+									  <strong>NOTE!</strong>
+									  <ul>
+									  	<li>
+									  		Additional Rules will be told by the organisers and rules are subject to change.
+									  	</li>
+									  	<li>
+									  		All Participants must carry their college ID card with them.
+									  	</li>
+									  </ul> 
+
+									</div>
+								</div>
+
+								<div>
+									<center>
+										<h3 style="font-size: 40px;">Registration Fee</h3>
+										<ul id="registration-fee"></ul>
+									</center>
+								</div>
+
+								<div>
+									<center>
+										<h3 style="font-size: 40px;">Prize Worth</h3>
+										<ul id="event-prize">	
+									</center>
+										
+									</ul>
+								</div>
+
+								<div>
+									<center>
+										<h3 style="font-size: 40px;">
+											DATE
+										</h3>
+										<span id="event-date"></span>
+									</center>
+								</div>
+
+								<div>
+									<center>
+										<h3 style="font-size: 40px;">TIME</h3>
+										<h4>Begins at <span id="event-time"></span></h4>
+										<h4>Reporting Time: <span id="event-time-report"></span></h4>
+									</center>
+								</div>
+
+								<div>
+									<center>
+										<h3 style="font-size: 40px;">Contact</h3>
+										<ul id="event-contact"></ul>
+									</center>
+								</div>
+
+								<div>
+									<center>
+										<h3 style="font-size: 40px;">
+											Venue
+										</h3>
+										<span id="event-venue"></span>
+									</center>
+									
+								</div>
+
+							</div>        	 
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			 			</div>
+					</div>
+				</div>
+			</div>	
+			 <!-- END OF MODAL -->
+
+			<!--start of points table-->
+			<h1 class="wow fadeInUp">Points Table</h1><hr>
+			<table class="table text-center table-bordered wow fadeInUp" style="background-color:black; color: white;">
+				<thead>
+					<tr>
+						<td>EVENTS</td>
+						<td>1<sup>ST</sup> PLACE</td>
+						<td>2<sup>ND</sup> PLACE</td>
+						<td>3<sup>RD</sup> PLACE</td>	
+					</tr>
+				</thead>
+
+				<tbody>
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>PERFORMING ARTS </td>
+						<td>60</td>
+						<td>36</td>
+						<td>24</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>PERSONALITY EVENTS</td>
+						<td>60</td>
+						<td>36</td>
+						<td>24</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>LITERARY EVENTS</td>
+						<td>40</td>
+						<td>24</td>
+						<td>16</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>FUN EVENTS</td>
+						<td>40</td>
+						<td>24</td>
+						<td>16</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>ART EVENTS</td>
+						<td>40</td>
+						<td>24</td>
+						<td>16</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>GAMING EVENTS</td>
+						<td>40</td>
+						<td>24</td>
+						<td>16</td>
+					</tr>
+					<!-- end of row 2 -->
+										<!-- Start of row 2 -->
+					<tr>
+						<td>WE ARE THE WORLD</td>
+						<td>80</td>
+						<td>48</td>
+						<td>32</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>FASHION SHOW *</td>
+						<td>100</td>
+						<td>60</td>
+						<td>40</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>DANCE COMPETITION</td>
+						<td>120</td>
+						<td>72</td>
+						<td>48</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>FLOOR DECORATION</td>
+						<td>80</td>
+						<td>48</td>
+						<td>32</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>CLASS DECORATION</td>
+						<td>80</td>
+						<td>48</td>
+						<td>32</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>RINK FOOTBALL</td>
+						<td>60</td>
+						<td>36</td>
+						<td>24</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>MANNEQUIN CHALLENGE</td>
+						<td>20</td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+					<!-- end of row 2 -->
+					<!-- Start of row 2 -->
+					<tr>
+						<td>PARTICIPATION</td>
+						<td colspan="3">2</td>
+					</tr>
+					<!-- end of row 2 -->
+				</tbody>
+			</table>
+			<!-- end of points table -->
+			<h4 class="wow fadeInUp">*Note : For FE / SE/ TE, points will be divided equally by the number of participating classes.</h4><hr>
+			<!--start of points table-->
+			<h1 class="wow fadeInUp">EUPHORIA CLASS POINTS</h1><hr>
+			<table class="table text-center table-bordered wow fadeInUp" style="background-color:black; color: white;">
+				<thead>
+					<tr>
+						<td>CLASS</td>
+						<td>POINTS</td>	
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>BE COMPUTERS </td>
+						<td>2464</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>BE IT</td>
+						<td>1638</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>BE ELECTRONICS </td>
+						<td>1027</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>BE PRODUCTION </td>
+						<td>75</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>TE COMPUTERS </td>
+						<td>593</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>TE IT</td>
+						<td>315</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>TE ELECTRONICS </td>
+						<td>339</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>TE PRODUCTION </td>
+						<td>419</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>SE COMPUTERS </td>
+						<td>130</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>SE IT</td>
+						<td>207</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>SE ELECTRONICS </td>
+						<td>133</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>SE PRODUCTION </td>
+						<td>73</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>FE COMPUTERS </td>
+						<td>118</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>FE IT</td>
+						<td>56</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>FE ELECTRONICS </td>
+						<td>182</td>
+					</tr>
+					<!-- end of row 1 -->
+					<!-- Start of sample row data  -->
+					<tr>
+						<td>FE PRODUCTION </td>
+						<td>206</td>
+					</tr>
+					<!-- end of row 1 -->
+				</tbody>
+			</table>
+			<!-- end of points table -->
+		</div>
+
+	</section>
+<!--end of page content-->
+
+
+	
+<footer id="page-footer">
+	
+</footer>
+
+
+
+		
+
+
+
+
+<script type="text/javascript" src="js/atlosh.js"></script>
+ <script type="text/javascript" src="js/jquery.mini.js"></script>
+ <script type="text/javascript" src="js/bootstrap.min.js"></script>
+ <script type="text/javascript">
+ 	$("#page-header").load("header.html");
+	$("#page-footer").load("footer.html");
+ </script>
+
+</body>
+</html>
+

@@ -1,279 +1,491 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Standard Meta -->
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/images/favicon/manifest.json">
-    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#263238">
-    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
-    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#263238">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.mini.css">
+	<script type="text/javascript" src="js/wow.mini.js"></script>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+	<title>CRCE STUDENT COUNCIL</title>
+	<script type="text/javascript" src="js/jquery.mini.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/font-awesome.js"></script>
 
-    <!-- Site Properties -->
-    <title>CRCE Students' Council</title>
-
-    <link rel="stylesheet" type="text/css" href="./bower_components/semantic/dist/semantic.min.css">
+	 <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css"/>
+	 <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css"/>
 
 
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <!--<script src="./bower_components/semantic/dist/semantic.min.js"></script>-->
-    <script src="bower_components/semantic/dist/components/sidebar.min.js"></script>
-    <script src="bower_components/semantic/dist/components/dropdown.min.js"></script>
-    <script src="bower_components/semantic/dist/components/transition.min.js"></script>
-
-    <style type="text/css">
-        .hidden.menu {
-            display: none;
-        }
-
-        .masthead.segment {
-            min-height: 700px;
-            padding: 1em 0em;
-        }
-
-        .masthead .logo.item img {
-            margin-right: 1em;
-        }
-
-        .masthead .ui.menu .ui.button {
-            margin-left: 0.5em;
-        }
-
-        .masthead h1.ui.header {
-            margin-top: 3em;
-            margin-bottom: 0em;
-            font-size: 4em;
-            font-weight: normal;
-        }
-
-        .masthead h2 {
-            font-size: 1.7em;
-            font-weight: normal;
-        }
-
-        .ui.vertical.stripe {
-            padding: 8em 0em;
-        }
-
-        .ui.vertical.stripe h3 {
-            font-size: 2em;
-        }
-
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
-            margin-top: 3em;
-        }
-
-        .ui.vertical.stripe .floated.image {
-            clear: both;
-        }
-
-        .ui.vertical.stripe p {
-            font-size: 1.33em;
-        }
-
-        .ui.vertical.stripe .horizontal.divider {
-            margin: 3em 0em;
-        }
-
-        .quote.stripe.segment {
-            padding: 0em;
-        }
-
-        .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
-
-        .footer.segment {
-            padding: 5em 0em;
-        }
-
-        .secondary.pointing.menu .toc.item {
-            display: none;
-        }
-
-        .ui.menu .item img.logo {
-            margin-right: 1.5em;
-        }
-
-        .main.container {
-            margin-top: 7em;
-        }
-
-        .wireframe {
-            margin-top: 2em;
-        }
-
-        .ui.footer.segment {
-            margin: 5em 0em 0em;
-            padding: 5em 0em;
-        }
-
-        #mobile-nav {
-            display: none;
-        }
-
-        #main {
-            padding-top: 60px;
-        }
-
-        @media only screen and (max-width: 700px) {
-            #large-nav {
-                display: none;
-            }
-
-            #mobile-nav {
-                display: block;
-            }
-
-            .secondary.pointing.menu .item,
-            .secondary.pointing.menu .menu {
-                display: none;
-            }
-
-            .secondary.pointing.menu .toc.item {
-                display: block;
-            }
-
-            .masthead.segment {
-                min-height: 350px;
-            }
-
-            .masthead h1.ui.header {
-                font-size: 2em;
-                margin-top: 1.5em;
-            }
-
-            .masthead h2 {
-                margin-top: 0.5em;
-                font-size: 1.5em;
-            }
-
-            .ui.sidebar {
-                overflow: visible !important;
-            }
-
-            #main {
-                padding-top: 0;
-            }
-        }
-
-        body {
-            background-color: #1B1C1D;
-            color: rgba(0, 0, 0, .87);
-        }
-    </style>
-    <script>
-        $(document)
-                .ready(function () {
-                    // create sidebar and attach to menu open
-                    $('.ui.sidebar')
-                            .sidebar('setting', 'transition', 'overlay')
-                            .sidebar('attach events', '.toc.item')
-                    ;
-                    $('.ui.dropdown')
-                            .dropdown()
-                    ;
-
-                })
-        ;
-    </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-80789003-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
 
 </head>
-<body>
+<body style="background-image: url(img/background.jpg);">
 
-<div class="ui inverted sidebar top menu">
-    <a href="#" class="item">Home</a>
-    <div class="ui simple dropdown item">
-        Activities
-        <i class="dropdown icon"></i>
-        <div class=" menu">
-            <a class="item" href="http://crescendo.fragnel.edu.in" target="_blank">Crescendo</a>
-            <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate" target="_blank">Fr. Conceicao Rodrigues Memorial Debate</a>
-            <a class="item" href="http://euphoria.gq" target="_blank">Euphoria</a>
-            <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
-        </div>
-    </div>
-    <a href="team.html" class="item">Our Team</a>
+	<!--start of the header-->
+	<section id="page-header" style="font-size:16px;">
+		
+	</section>
+	<!--End of the header-->
+
+	<!--start of the page content-->
+	<section class="container wow">
+
+		<!--start of the student council header-->
+		<div style="margin-top:45px;">
+			
+
+			<div class="row">
+				<img src="img/crce.png" alt="Frcrce logo" class="wow slideInRight crceimg" width="150px" height="auto">
+				<img src="img/logo.png" alt="student council logo" class="wow slideInLeft stucologo" width="150px" height="auto">
+			</div>
+
+			
+		
+		<!--start of the about student council crce-->
+
+			<div class="stucotitle">
+				<center>
+					<h1 class="wow bounceInDown" data-wow-duration="1s" >Students' Council</h1>
+					<h2 class="wow bounceInDown" data-wow-duration="2s">Fr. Conceicao Rodrigues College of Engineering</h2>
+				</center>
+				
+			</div>
+
+			<!--start of testomonials-->
+			<div id="cricket-review" class="owl-carousel owl-theme wow" style="margin-top:100px;">
+				
+				<!--START of Shantanu -->
+					<div class="item">
+						
+						<div class="panel panel-default wow fadeInUp">
+
+							<div class="panel-heading" style="background: #82bac6 url(img/quote-testimonial.png) no-repeat 20px 20px;">
+								<p style="padding: 30px 30px 30px 80px;">
+									<strong style="font-size:25px;">"</strong> Staying true to its meaning, 'Euphoria' has truly been an unmatched source of happiness for all of us since the past 4 years. This week long fest is definitely the most anticipated event throughout the year as it has something in store for everyone. It is indeed, a huge platform for people to showcase their talents and escape the monotony of our hectic routines. My class and I are eagerly waiting for it to commence! <strong style="font-size:25px;">"</strong>
+								</p>
+							</div>
+
+							<div class="panel-body">
+								
+									<img src="img/review/anisha.jpg" alt="Anisha Shanbhag" class="panel-profile-img">
+									
+									<h3 class="avatarclass">Anisha Shanbhag</h3>
+								
+							</div>
+
+
+						</div>
+					</div>
+				<!--end of Shantanu -->
+
+				<!--start of chris -->
+					<div class="item">
+
+					
+						<div class="panel panel-default wow fadeInUp">
+
+							<div class="panel-heading" style="background: #82bac6 url(img/quote-testimonial.png) no-repeat 20px 20px;">
+								<p style="padding: 30px 30px 30px 80px;">
+									 Next year is going to be so incomplete with my calendar not flashing " Euphoria " anymore.From the branches competing for the cultural trophy to the chantings and sledging in the auditorium.Beginning from the most dramatic proms and ending at fr.crce's arena(DJ.night).Some slaying with their moves while others taking it with their notes on high pitch.Euphoria is heart and we are its heartbeat.#onelastimeeuphorically
+								</p>
+							</div>
+
+							<div class="panel-body" >
+								
+									<img src="img/review/sheldon.jpg" alt="shantanu" class="panel-profile-img">
+									
+									<h3 class="avatarclass">Sheldon D'souza</h3>
+								
+							</div>
+
+						</div>
+					</div>
+				<!--end of chris -->
+
+				
+
+				<!--start of Santosh Dudhal -->
+					<div class="panel panel-default wow fadeInUp">
+
+						<div class="panel-heading" style="background: #82bac6 url(img/quote-testimonial.png) no-repeat 20px 20px;">
+							<p style="padding: 30px 30px 30px 80px;">
+								 Euphoria will always have a very special place in my heart. Euphoria has a soul that is vibrant, contagious and exuberant. As years have gone by the level of performances have increased tremendously.Feeling a part of something bigger than you is palpable at Euphoria.I wish this Euphoria being the last for us brings us together, the same way it did in our first year.
+							</p>
+						</div>
+
+						<div class="panel-body" >
+							
+								<img src="img/review/tanya.jpg" alt="shantanu" class="panel-profile-img">
+								
+								<h3 class="avatarclass" style="margin-top: 21px;">Tanya Baptist</h3>
+							
+						</div>
+
+					</div>
+				<!--end of Santosh Dudhal -->
+
+				<!--start of Digvijay Thakur -->
+					<div class="panel panel-default wow fadeInUp">
+
+						<div class="panel-heading" style="background: #82bac6 url(img/quote-testimonial.png) no-repeat 20px 20px;">
+							<p style="padding: 30px 30px 30px 80px;">
+								Euphoria! The most precious and fun memories I have of college are all of euphoria days! It's the time of the year when you end up interacting with so many people and making so many new friends! The entire vibe in college is just so enthralling! The united class spirit for winning all the events, the planning, the late evening practices, Dj night, prom, the entire 'Euphoria spirit' just helps bring us all students closer together! Of all the things that i will miss about college, i think down the line, euphoria time will make me the most nostalgic.
+							</p>
+						</div>
+
+						<div class="panel-body" >
+							
+								<img src="img/review/surabhi.jpg" alt="shantanu" class="panel-profile-img">
+								
+								<h3 class="avatarclass">Surabhi Rotiwar</h3>
+							
+						</div>
+
+					</div>
+				<!--end of Digvijay Thakur -->
+
+			</div>
+			<!--End of testomonials-->
+
+			<!--start of upcoming events-->
+			<h1>Some of our Upcoming Events</h1><hr>
+			<div id="upcome-event" class="owl-carousel owl-theme wow" style="margin-top:100px;">
+				
+				<!--START of Athlos -->
+					<div class="item">
+						
+						<div class="panel panel-default wow fadeInUp">
+
+							<div class="panel-heading" style="background:url(img/upcoming/athlos.jpg);height:240px;background-size:cover;">
+							</div>
+
+							<div class="panel-body">
+								<h2>ATHLOS</h2>
+								<p>
+									Athlos is an event where we have teams from various colleges competing, to be crowned champions. We have an amazing set of events lined up for you
+								</p>
+								<h4>DATE:19/01/2017</h4>
+								<button class="btn btn-primary" onclick="window.location.href='Atlos.html'">
+									More Details
+								</button>								
+							</div>
+
+
+						</div>
+					</div>
+				<!--end of Athlos -->
+
+				<!-- start of BADMINTON -->
+					<div class="item">
+						
+						<div class="panel panel-default wow fadeInUp">
+
+							<div class="panel-heading" style="background:url(img/upcoming/badminton.jpg);height:240px;background-size:cover;">
+							</div>
+
+							<div class="panel-body">
+								<h2>BADMINTON</h2>
+								<p>
+									Do you think you have what it takes to be ultimate badminton champion?.The competition is going to be intense!! so tighten up your boots and gear up 
+								</p>
+								<h4>DATE:26/01/2017</h4>
+								<button class="btn btn-primary disabled" onclick="window.location.href='#'">
+									More Details
+								</button>								
+							</div>
+
+
+						</div>
+					</div>
+				<!-- END OF BADMINTON -->
+
+				<!-- start of basket ball -->
+					<div class="item">
+						
+						<div class="panel panel-default wow fadeInUp">
+
+							<div class="panel-heading" style="background:url(img/upcoming/basket.jpg);height:240px;background-size:cover;">
+							</div>
+
+							<div class="panel-body">
+								<h2>BASKETBALL</h2>
+								<p>
+									The sport of basketball is known as a fun past time for any person young or old. Basketball is a great way of exercise and a great way to have fun with friends and possibly make some new ones.
+								</p>
+								<h4>DATE:11/02/2017</h4>
+								<button class="btn btn-primary disabled" onclick="window.location.href='#'">
+									More Details
+								</button>								
+							</div>
+
+
+						</div>
+					</div>
+				<!-- end of basket ball -->
+
+				<!-- start of sport day -->
+					<div class="item">
+						
+						<div class="panel panel-default wow fadeInUp">
+
+							<div class="panel-heading" style="background:url(img/upcoming/sport.jpg);height:240px;background-size:cover;">
+							</div>
+
+							<div class="panel-body">
+								<h2>Sports Day</h2>
+								<p>
+									Sports day has always presented CRCE.s best athletes a chance to showcase their individual talents, team work &amp steely resolve.
+								</p>
+								<h4>DATE:18/02/2017</h4>
+								<button class="btn btn-primary disabled" onclick="window.location.href='#'">
+									More Details
+								</button>								
+							</div>
+
+
+						</div>
+					</div>
+				<!-- end of sport day -->
+
+			</div>
+			<!--End of upcoming events-->
+		</div>	
+		<!--end of the student council header-->
+			
+		
+		
+		<!--end of the about student council crce-->
+
+	</section>
+	<br>
+	<section>
+	<!--startof the parallax-->
+		<div class="parallax" style="background-image:url('img/college.jpg'); margin-left:0px;margin-right:0px;">
+    		
+    	</div>
+   		 <!--End of the parallaxframe-->
+	</section>
+
+	<!--start of the events-->
+	<section class="container wow">
+
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<center><h1 class="heading">Our Events</h1></center> <hr width="75%">
+
+			<!--start of technical event-->
+			<div>
+				<h2><center>Technical Events</center></h2>
+				<br>
+
+				<!--start of crescendo -->
+				<div class="col-lg-6 col-md-6 col-sm-6 wow fadeIn">
+					
+					<div class="wrapper">
+						
+						<img class="img-rounded" src="img/crescendo.png" alt="crescendo image">
+
+						<div class="content">
+							
+							<div class="text_area">
+								<center>
+									<h2>
+										Crescendo 2k16<br>
+										<a class="btn btn-success" href="http://crcestudentcouncil.in/crescendo/Home_Page/index.html">Know more</a>
+									</h2>
+								</center>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end of crescendo-->
+
+				<!--start of IV-->
+				<div class="col-lg-6 col-md-6 col-sm-6 wow fadeIn" >
+					
+					<div class="wrapper">
+						
+						<img class="img-rounded" src="img/iv.png" alt="crescendo image">
+
+						<div class="content">
+							
+							<div class="text_area">
+								<center>
+									<h2>
+										Industrial Visit<br>
+										<a class="btn btn-success" href="Iv.html">Know more</a>
+									</h2>
+								</center>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end of IV-->
+
+			</div>
+			<!--end of technical event-->
+
+			<!--start of cultural event-->
+			<div >
+				<h2><center style="margin-top:10px;">Cultural Events</center></h2>
+				<br>
+
+				<!--start of friendship day -->
+				<div class="col-lg-6 col-md-6 col-sm-6 wow fadeInLeft" >
+					
+					<div class="wrapper">
+						
+						<img class="img-rounded" src="img/frday.png" alt="frendship day">
+
+						<div class="content">
+							
+							<div class="text_area">
+								<center>
+									<h2>
+										<span style="color:black;">Friendship day</span><br>
+										<a class="btn btn-success" href="#">Know more</a>
+									</h2>
+								</center>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end of friendship day-->
+
+				<!--start of Human crce -->
+				<div class="col-lg-6 col-md-6 col-sm-6 wow fadeInRight">
+					
+					<div class="wrapper">
+						
+						<img class="img-rounded" src="img/hoc.png" alt="Human of Crce">
+
+						<div class="content">
+							
+							<div class="text_area">
+								<center>
+									<h2>
+										Human of CRCE<br>
+										<a class="btn btn-success" href="https://www.facebook.com/humansofcrce/" target="_blank">Know more</a>
+									</h2>
+								</center>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end of Human of crce-->
+				<!--start of Human crce -->
+				<div class="col-lg-6 col-md-6 col-sm-6 wow fadeInRight">
+					
+					<div class="wrapper">
+						
+						<img class="img-rounded" src="img/euphoria/default.jpg" alt="Euphoria">
+
+						<div class="content">
+							
+							<div class="text_area">
+								<center>
+									<h2>
+										Euphoria 2017<br>
+										<a class="btn btn-success" href="Euphoria.html" target="_blank">Know more</a>
+									</h2>
+								</center>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!--end of Human of crce-->
+			</div>
+
+			</div>
+			<!--end of cultural event-->
+
+		</div>
+	
+	</section>
+	<!--end of the event-->
+	<!--end of page content-->
+
+	<!--start of the footer-->
+	<div id="page-footer">
+		
+	</div>
+	<!--end of the footer-->
+
+
 </div>
 
-<div class="ui fixed inverted menu" id="large-nav">
-    <div class="ui container">
-        <a href="#" class="header item">
-            <img class="logo" src="images/favicon/favicon-32x32.png">
-            CRCE Students' Council</a>
-        <a href="#" class="item">Home</a>
-        <div class="ui dropdown item">
-            Activities
-            <i class="dropdown icon"></i>
-            <div class=" menu">
-                <a class="item" href="http://crescendo.fragnel.edu.in" target="_blank">Crescendo</a>
-                <a class="item" href="https://en.wikipedia.org/wiki/Fr._Conceicao_Rodrigues_Memorial_Debate" target="_blank">Fr. Conceicao Rodrigues Memorial Debate</a>
-                <a class="item" href="http://euphoria.gq" target="_blank">Euphoria</a>
-                <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
-            </div>
-        </div>
-        <a href="team.html" class="item">Our Team</a>
-    </div>
-</div>
+	 <!--import the jquery-->
+	<script type="text/javascript" src="js/jquery.mini.js"></script>
+	 <script type="text/javascript" src="js/owl.carousel.js"></script>
 
-<div class="pusher" id="parent" style="background-color: #1B1C1D">
-    <div class="ui inverted vertical masthead center aligned segment">
-        <div class="ui container">
-            <div class="ui large secondary inverted pointing menu">
-                <a class="header toc item">
-                    <i class="sidebar icon"></i>
-                    <img class="logo" src="images/favicon/android-chrome-192x192.png">
-                    CRCE Students' Council
-                </a>
-            </div>
-        </div>
-        <div class="ui inverted center aligned segment" id="main">
-            <div class="ui one column stackable grid container">
-                <div class="column">
-                    <a href="friendshipday.html" class="ui large rounded image">
-                        <img src="images/cover-images/frday.jpg">
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="football.html" class="ui large rounded image">
-                        <img src="images/cover-images/football.png">
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="http://crescendo.fragnel.edu.in" target="_blank" class="ui large rounded image">
-                        <img src="images/cover-images/crescendo.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 
+<script type="text/javascript">
+	$("#page-header").load("header.html");
+	$("#page-footer").load("footer.html");
+	$('#cricket-review').owlCarousel({
+    		loop:true,
+		    margin:10,
+		    nav:true,
+		    
+		    responsive:{
+		        0:{
+		            items:1  //nos of item in small screen
+		        },
+		        600:{
+		            items:2	//nos of item in medium screen
+		        },
+		        1000:{
+		            items:2 //nos of item in large screen
+		        }
+		    }
+		});
+
+	$('#upcome-event').owlCarousel({
+    		loop:true,
+		    margin:10,
+		    nav:true,
+		    autoplay:true,
+		    autoplayTimeout:3000,
+		    autoplayHoverPause:false,
+		    responsive:{
+		        0:{
+		            items:1  //nos of item in small screen
+		        },
+		        600:{
+		            items:3	//nos of item in medium screen
+		        },
+		        1000:{
+		            items:3 //nos of item in large screen
+		           
+    			}
+		    }
+		});
+	
+</script>
+    
 </html>

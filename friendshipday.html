@@ -130,6 +130,10 @@
                 margin-top: 0.5em;
                 font-size: 1.5em;
             }
+
+            .ui.sidebar {
+                overflow: visible !important;
+            }
         }
 
 
@@ -147,6 +151,10 @@
                             .sidebar('attach events', '.toc.item')
                     ;
                     $('.card .image').dimmer({on: 'hover'});
+
+                    $('.ui.dropdown')
+                            .dropdown()
+                    ;
 
                 })
         ;
@@ -172,7 +180,7 @@
 <body>
 
 <div class="ui inverted sidebar top menu">
-    <a href="#" class="item">Home</a>
+    <a href="index.html" class="item">Home</a>
 
     <div class="ui simple dropdown item">
         Activities
@@ -186,7 +194,7 @@
             <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
         </div>
     </div>
-    <a href="team.html" class="item">Our Team</a>
+    <a href="about.html" class="item">About Us</a>
 </div>
 
 <div class="ui fixed inverted menu" id="large-nav">
@@ -208,7 +216,7 @@
                 <a class="item" href="http://fragmag.gq" target="_blank">Fragmag</a>
             </div>
         </div>
-        <a href="team.html" class="item">Our Team</a>
+        <a href="about.html" class="item">About Us</a>
     </div>
 </div>
 
@@ -373,75 +381,94 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="ui inverted center aligned segment" id="main">
         <div class="ui horizontal divider">
             <div class="ui inverted segment">
                 <h2 class="ui inverted header">Points</h2>
             </div>
         </div>
         <div class="ui container">
-            <table class="ui unstackable celled inverted grey table">
-                <thead>
-                <tr class="active">
-                    <th>Event</th>
-                    <th>1st</th>
-                    <th>2nd</th>
-                    <th>3rd</th>
-                    <th>Participation</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Dizzy Football</td>
-                    <td>60</td>
-                    <td>36</td>
-                    <td>24</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Need For Speed</td>
-                    <td>60</td>
-                    <td>36</td>
-                    <td>24</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Tic Tac Toe</td>
-                    <td>60</td>
-                    <td>36</td>
-                    <td>24</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Fill Your Bottle</td>
-                    <td>60</td>
-                    <td>36</td>
-                    <td>24</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Shake That</td>
-                    <td>60</td>
-                    <td>36</td>
-                    <td>24</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Class Selfie</td>
-                    <td>60</td>
-                    <td>36</td>
-                    <td>24</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Game Changer</td>
-                    <td>150</td>
-                    <td>90</td>
-                    <td>60</td>
-                    <td>2</td>
-                </tr>
-                </tbody>
-
-            </table>
+            <div class="ui segment" style="padding: 0;">
+                <table class="ui unstackable celled inverted table">
+                    <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>1st</th>
+                        <th>2nd</th>
+                        <th>3rd</th>
+                        <th>Participation</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Dizzy Football</td>
+                        <td>60</td>
+                        <td>36</td>
+                        <td>24</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Need For Speed</td>
+                        <td>60</td>
+                        <td>36</td>
+                        <td>24</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Tic Tac Toe</td>
+                        <td>60</td>
+                        <td>36</td>
+                        <td>24</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Fill Your Bottle</td>
+                        <td>60</td>
+                        <td>36</td>
+                        <td>24</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Shake That</td>
+                        <td>60</td>
+                        <td>36</td>
+                        <td>24</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Class Selfie</td>
+                        <td>60</td>
+                        <td>36</td>
+                        <td>24</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Game Changer</td>
+                        <td>150</td>
+                        <td>90</td>
+                        <td>60</td>
+                        <td>2</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="ui inverted vertical footer segment">
+        <div class="ui inverted section divider"></div>
+        <div class="ui center aligned container">
+            <img src="images/favicon/favicon-32x32.png" class="ui centered mini image">
+            <div class="ui horizontal inverted small divided link list">
+                <a class="item" href="index.html">Home</a>
+                <a class="item" href="#">Site Map</a>
+                <a class="item" href="about.html">Contact Us</a>
+                <a class="item" href="#">Terms and Conditions</a>
+            </div>
+            <div class="ui container">
+                <p>Copyright © 2016 Students' Council</p>
+                <p>Site design by Varun Bhatt & Flavion D'sa</p>
+            </div>
         </div>
     </div>
 </div>

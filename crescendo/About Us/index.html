@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Standard Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="#B2182A">
+
+    <title>About Us</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.css">
+    <link rel="stylesheet" href="animate.css">
+
+    <style>
+        #main {
+            
+         background-image: url('images/bakg.jpg') ;
+
+        }
+
+        .secondary.menu {
+            margin-top: 1em;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+
+        .ui.text h1.ui.header {
+            margin-top: 1em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+
+        .ui.text h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+        }
+
+        .ui.text {
+            margin-bottom: 1em;
+        }
+
+        .m-scene .scene_element {
+            animation-duration: 0.75s;
+            transition-timing-function: ease-in;
+            animation-fill-mode: both;
+        }
+
+        .m-scene.is-exiting .scene_element {
+            animation-direction: alternate-reverse;
+        }
+
+        ::-webkit-scrollbar {
+            width: inherit;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #B2182A;
+            border-radius: 5px;
+            width: 13px;
+        }
+
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        ::-webkit-scrollbar-corner {
+            display: none;
+        }
+
+        @media only screen and (max-width: 700px) {
+
+        }
+      
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            z-index: 1;
+            background-image: url('images/bakg.png') ; 
+
+            
+
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+   
+    <script src="semantic-ui/semantic.min.js"></script>
+   
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+   
+</head>
+
+<body class="m-scene">
+
+<!--<div class="ui inverted sidebar top">
+    <div class="ui four item inverted menu">
+        <a class="item" href="index.html">Home</a>
+        <a class="item" href="sponsors.html">Sponsors</a>
+        <a class="item" href="events.html">Events</a>
+        <a class="active item" href="aboutus.html">About Us</a>
+    </div>
+</div>-->
+
+<div id="main" class="pusher">
+   <div class="ui container scene_element slideInDown">
+        <div class="ui large fluid four item secondary inverted pointing menu">
+            <a class="toc item">
+                <div class="ui black label">
+                    Menu
+                </div>
+            </a>
+        <a class="item" href="../Home_Page/index.html">Home</a>
+        <a class="item" href="../Spons/index.html">Sponsors</a>
+        <a class="item" href="../Events/index.html">Events</a>
+        <a class="active item" href="#">About Us</a>
+        </div>
+    </div>
+
+    <div class="ui text container">
+        <h1 class="ui centered inverted header">
+            About Us
+        </h1>
+
+        <h2 class="ui centered inverted header">We'd love to hear from you.</h2>
+    </div>
+
+    <div class="ui container">
+        <div class="ui inverted horizontal divider"><h3 style="color: #00b5ad">Students' Council</h3></div>
+
+        <div class="ui centered stackable grid container">
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <img class="ui small circular image" src="img/Elroy.png">
+
+                    <div class="content">
+                        <a class="header"><h3>Elroy Rodrigues</h3></a>
+
+                        <div class="description">Technical Head</div>
+                        <a class="description" href="tel:8097055880">Contact: 8097055880</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <img class="ui small circular image" src="img/Jerry.png">
+
+                    <div class="content">
+                        <a class="header"><h3>Jeremiah D'Souza</h3></a>
+
+                        <div class="description">General Secretary</div>
+                        <a class="description" href="tel:9833997570">Contact: 9833997570</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui inverted horizontal divider"><h3 style="color: #00b5ad">WEBSITE TEAM</h3></div>
+
+        <div class="ui centered stackable grid container">
+
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <img class="ui small circular image" src="img/Rohit.jpg">
+
+                    <div class="content">
+                        <a class="header"><h3>Rohit Sharma</h3></a>
+
+                        <div class="description">Coding Wizard</div>
+                    </div>
+                </div>
+            </div>
+             <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <img class="ui small circular image" src="img/Igor.jpg" style="height:148px; width:148px;">
+
+                    <div class="content">
+                        <a class="header"><h3>Igor Monteiro</h3></a>
+
+                        <div class="description">Design Wizard</div>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <img class="ui small circular image" src="img/Jason.jpg">
+
+                    <div class="content">
+                        <a class="header"><h3>Jason Pereira</h3></a>
+
+                        <div class="description">Coding Wizard</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ui inverted horizontal divider"><h3 style="color: #00b5ad">Other Councils</h3></div>
+        <div class="ui centered stackable grid container">
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                   <!-- <img class="ui small circular image" src="images/Elton-1.jpg">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Igor Monteiro</h3></a>
+
+                        <div class="description">CSI</div>
+                        <a class="description" href="tel:9619555302">Contact: 9619555302</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                <!--    <img class="ui small circular image" src="images/Rakesh.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Gavin Tauro</h3></a>
+
+                        <div class="description">IEEE</div>
+                        <a class="description" href="tel:9757261884">Contact: 9757261884</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Pearl.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Apurva Nehru</h3></a>
+
+                        <div class="description">WIE</div>
+                        <a class="description" href="tel:9969483121">Contact: 9969483121</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Rachit.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Eshani Sharma</h3></a>
+
+                        <div class="description">E-Cell</div>
+                        <a class="description" href="tel:9619624365">Contact: 9619624365</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Chai.jpg">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Kevin Rodrigues</h3></a>
+
+                        <div class="description">ITSA</div>
+                        <a class="description" href="tel:9769984936">Contact: 9769984936</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Benjamin.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Larris Fernandes</h3></a>
+
+                        <div class="description">NSS</div>
+                        <a class="description" href="tel:7040243774">Contact: 7040243774</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Gautam.jpg">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Nirmiti Karandikar</h3></a>
+
+                        <div class="description">SAE</div>
+                        <a class="description" href="tel:8554058975">Contact: 8554058975</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Rishabh.jpg">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Elton D'Mello</h3></a>
+
+                        <div class="description">ASME</div>
+                        <a class="description" href="tel:9167078150">Contact: 9167078150</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Wayne.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Jeswin Jacob</h3></a>
+
+                        <div class="description">Rotaract</div>
+                        <a class="description" href="tel:8237732221">Contact: 8237732221</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Rahul.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Annabelle D'Souza</h3></a>
+
+                        <div class="description">CodeLabs</div>
+                        <a class="description" href="tel:9757057010">Contact: 9757057010</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Rahul.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Rukhsar Khan</h3></a>
+
+                        <div class="description">Lit Club</div>
+                        <a class="description" href="tel:8655545206">Contact: 8655545206</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Rahul.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Jeet Thakur</h3></a>
+
+                        <div class="description">TedX</div>
+                        <a class="description" href="tel:9930450946">Contact: 9930450946</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Rahul.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Om Prakash</h3></a>
+
+                        <div class="description">Project Cell</div>
+                        <a class="description" href="tel:9768088975">Contact: 9768088975</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui compact center aligned inverted segment">
+                    <!--<img class="ui small circular image" src="images/Rahul.png">-->
+
+                    <div class="content">
+                        <a class="header"><h3>Binny Joshua</h3></a>
+
+                        <div class="description">SME</div>
+                        <a class="description" href="tel:9920182609">Contact: 9920182609</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+			$('#menu').click(function(){
+				$('.mid').css('display','block');
+				$('#menu').css('display','none');
+			});
+
+			$('#maincon').click(function(){
+
+				$('.mid').css('display','none');
+				$('#menu').css('display','block');
+			});
+
+		</script>
+       
+    </div>
+</div> 
+</body>
+
+</html>
